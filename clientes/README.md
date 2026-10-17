@@ -1,11 +1,11 @@
 # Tiendas Mass — HTML, CSS y JavaScript
 
 ## Archivos 
-- `index.html`: documento inicial del catálogo.
-- `styles.css`: colores, tipografías y diseño de todas las pantallas.
-- `app.js`: productos, textos, pantallas y navegación; HTML de las pantallas dentro de funciones como `catalog`, `login`, `checkout`, `tracking`.
-- `cart-logic.js`: reglas del carrito, descuentos y validación; conversión a JavaScript de las reglas del proyecto original.
-- `assets/`: las dos fotografías locales del prototipo.
+- `src/index.html`: documento inicial del catálogo.
+- `src/css/styles.css`: colores, tipografías y diseño de todas las pantallas.
+- `src/js/app.js`: productos, textos, pantallas y navegación; HTML de las pantallas dentro de funciones como `catalog`, `login`, `checkout`, `tracking`.
+- `src/js/cart-logic.js`: reglas del carrito, descuentos y validación; conversión a JavaScript de las reglas del proyecto original.
+- `src/assets/`: las dos fotografías locales del prototipo.
 - Cada carpeta de pantalla contiene su propio `index.html`, con metadatos y un identificador para mostrarla.
 
 ## Pantallas
