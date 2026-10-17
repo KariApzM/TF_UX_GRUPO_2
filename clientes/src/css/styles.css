@@ -1,0 +1,878 @@
+:root {
+    --primary: oklch(.45 .24 265);
+    --primary-foreground: oklch(1 0 0);
+    --secondary: oklch(.86 .18 93);
+    --foreground: oklch(.31 .13 262);
+    --background: oklch(.972 .012 258);
+    --card: oklch(1 0 0 / 82%);
+    --glass: oklch(1 0 0 / 72%);
+    --muted: oklch(.94 .025 258);
+    --muted-foreground: oklch(.52 .06 260);
+    --border: oklch(.87 .035 259);
+    --success: oklch(.52 .13 151);
+    --destructive: oklch(.58 .23 27);
+    --shadow: 0 40px 90px -40px color-mix(in oklab, var(--primary) 55%, transparent);
+    --font-body: Figtree, Arial, sans-serif;
+    --font-heading: Outfit, Arial, sans-serif
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    color: var(--foreground);
+    font: 14px var(--font-body);
+    letter-spacing: 0;
+    min-height: 100vh;
+    padding: 24px 16px
+}
+
+button,
+input,
+select {
+    font: inherit;
+    color: inherit
+}
+
+button,
+a,
+input,
+select {
+    -webkit-tap-highlight-color: transparent
+}
+
+button,
+a {
+    touch-action: manipulation
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+button {
+    cursor: pointer
+}
+
+button:disabled {
+    opacity: .5;
+    cursor: not-allowed
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--secondary);
+    outline-offset: 2px
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0
+}
+
+h1,
+h2,
+h3,
+.price {
+    font-family: var(--font-heading)
+}
+
+h1 {
+    font-size: 28px;
+    line-height: 1.15
+}
+
+h2 {
+    font-size: 19px
+}
+
+p {
+    line-height: 1.45
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block
+}
+
+.shell {
+    max-width: 430px;
+    margin: auto;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: 26px;
+    overflow: hidden;
+    min-height: 760px;
+    backdrop-filter: blur(24px)
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10
+}
+
+.brand-head {
+    background: var(--secondary);
+    padding: 12px 16px 16px
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px
+}
+
+.brand {
+    font: bold italic 28px var(--font-heading)
+}
+
+.tagline {
+    font-size: 11px;
+    font-weight: 600
+}
+
+.tiny {
+    font-size: 11px
+}
+
+.small {
+    font-size: 12px
+}
+
+.muted {
+    color: var(--muted-foreground)
+}
+
+.success {
+    color: var(--success)
+}
+
+.error {
+    color: var(--destructive);
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 4px
+}
+
+.store {
+    background: var(--card);
+    border: 0;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 9px 13px;
+    text-align: left;
+    margin-top: 12px
+}
+
+.store .grow {
+    flex: 1;
+    min-width: 0
+}
+
+.store strong {
+    font-size: 12px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.searchbar {
+    padding: 12px 16px;
+    background: var(--glass);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 44px;
+    gap: 8px
+}
+
+.searchbox {
+    position: relative
+}
+
+.searchbox input {
+    border: 0;
+    border-radius: 30px;
+    padding-left: 36px;
+    padding-right: 32px
+}
+
+.searchbox .search-icon {
+    position: absolute;
+    left: 12px;
+    top: 13px
+}
+
+.searchbox .clear {
+    position: absolute;
+    right: 6px;
+    top: 7px;
+    width: 30px;
+    height: 30px;
+    min-height: 0
+}
+
+.icon {
+    width: 19px;
+    height: 19px;
+    vertical-align: middle;
+    flex-shrink: 0;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round
+}
+
+.btn {
+    border: 1px solid var(--border);
+    background: var(--card);
+    border-radius: 12px;
+    min-height: 42px;
+    padding: 10px 13px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1.25;
+    text-align: center
+}
+
+.btn.primary {
+    background: var(--primary);
+    color: var(--primary-foreground);
+    border-color: var(--primary)
+}
+
+.btn.yellow {
+    background: var(--secondary);
+    border-color: var(--secondary)
+}
+
+.btn.ghost {
+    background: transparent;
+    border-color: transparent
+}
+
+.btn.round {
+    border-radius: 50%;
+    width: 44px;
+    padding: 0;
+    position: relative
+}
+
+.btn.full {
+    width: 100%
+}
+
+.btn.touch {
+    min-height: 48px
+}
+
+.badge {
+    background: var(--secondary);
+    color: var(--foreground);
+    border-radius: 20px;
+    padding: 3px 8px;
+    font-size: 10px;
+    font-weight: bold
+}
+
+.count {
+    position: absolute;
+    right: -3px;
+    top: -4px;
+    min-width: 20px;
+    height: 20px;
+    display: grid;
+    place-items: center
+}
+
+.flow {
+    padding: 12px;
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr) 44px;
+    align-items: center
+}
+
+.flow h1 {
+    font-size: 19px;
+    text-align: center;
+    line-height: 1.3
+}
+
+.content {
+    padding: 0 16px 24px
+}
+
+.stack>*+* {
+    margin-top: 16px
+}
+
+.panel {
+    padding: 16px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    border-radius: 16px
+}
+
+.blue {
+    background: var(--primary);
+    color: var(--primary-foreground);
+    border-color: var(--primary)
+}
+
+.blue .muted {
+    color: var(--primary-foreground);
+    opacity: .8
+}
+
+.eyebrow {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase
+}
+
+.blue .eyebrow {
+    color: var(--secondary)
+}
+
+.price {
+    font-size: 28px;
+    font-weight: 700
+}
+
+.blue h2 {
+    font-size: 22px;
+    margin-top: 5px
+}
+
+.price-line {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-top: 7px;
+    flex-wrap: wrap
+}
+
+.old {
+    text-decoration: line-through;
+    font-size: 11px;
+    opacity: .7
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 8px
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px
+}
+
+.mt {
+    margin-top: 16px
+}
+
+.mt-sm {
+    margin-top: 8px
+}
+
+.catalog {
+    padding-top: 16px;
+    padding-bottom: 110px
+}
+
+.catalog h1 {
+    font-size: 19px;
+    overflow-wrap: anywhere
+}
+
+.product {
+    padding: 8px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--card);
+    min-width: 0
+}
+
+.product-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background: var(--muted)
+}
+
+.product img {
+    aspect-ratio: 1;
+    object-fit: cover;
+    width: 100%
+}
+
+.product-image .badge {
+    position: absolute;
+    top: 8px;
+    left: 8px
+}
+
+.sold {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: color-mix(in oklab, var(--primary) 65%, transparent)
+}
+
+.sold span {
+    color: var(--destructive);
+    background: var(--card);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold
+}
+
+.product h2 {
+    font: 600 14px var(--font-body);
+    min-height: 40px;
+    margin-top: 8px
+}
+
+.product .price {
+    font-size: 19px;
+    color: var(--primary)
+}
+
+.product .btn {
+    width: 100%;
+    margin-top: 8px;
+    min-height: 38px
+}
+
+.product .stock {
+    font-size: 10px;
+    font-weight: 700;
+    margin-top: 5px
+}
+
+.cart-float {
+    position: fixed;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 56px);
+    max-width: 374px;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 13px 16px;
+    border-radius: 16px;
+    background: var(--primary);
+    color: var(--primary-foreground);
+    box-shadow: var(--shadow)
+}
+
+.cart-float .badge {
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    font-size: 16px
+}
+
+.cart-float strong {
+    font-family: var(--font-heading);
+    font-size: 17px
+}
+
+.cart-line {
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 12px;
+    padding: 12px
+}
+
+.cart-line img {
+    width: 72px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 12px
+}
+
+.cart-line h2 {
+    font: 600 14px var(--font-body)
+}
+
+.cart-line .price {
+    font-size: 19px;
+    color: var(--primary)
+}
+
+.stepper {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    background: var(--background)
+}
+
+.stepper .btn {
+    min-height: 32px;
+    width: 32px;
+    padding: 0
+}
+
+.stepper input {
+    width: 40px;
+    text-align: center;
+    border: 0;
+    background: transparent;
+    padding: 4px;
+    height: 32px
+}
+
+.stepper span {
+    width: 28px;
+    text-align: center;
+    font-weight: 700
+}
+
+.remove {
+    color: var(--destructive)
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 5px
+}
+
+.total-row span:last-child {
+    flex-shrink: 0
+}
+
+.divider {
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    margin-top: 12px
+}
+
+.blue .divider {
+    border-color: color-mix(in oklab, var(--primary-foreground) 20%, transparent)
+}
+
+.total {
+    font: 700 23px var(--font-heading)
+}
+
+label.field {
+    display: grid;
+    gap: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 12px
+}
+
+input,
+select {
+    width: 100%;
+    height: 44px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--background);
+    padding: 10px 12px;
+    min-width: 0
+}
+
+input[type=range] {
+    padding: 0;
+    accent-color: var(--primary)
+}
+
+input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--primary)
+}
+
+.checkline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    background: var(--muted);
+    border-radius: 12px;
+    font-weight: 600
+}
+
+.notice {
+    background: var(--muted);
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 12px
+}
+
+.link {
+    color: var(--primary);
+    text-decoration: underline;
+    font-weight: 600
+}
+
+.or {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+    color: var(--muted-foreground);
+    margin: 16px 0
+}
+
+.or:before,
+.or:after {
+    content: '';
+    height: 1px;
+    background: var(--border);
+    flex: 1
+}
+
+.detail-image {
+    aspect-ratio: 1;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 16px
+}
+
+.empty {
+    text-align: center;
+    padding: 34px 20px
+}
+
+.empty .icon {
+    width: 42px;
+    height: 42px
+}
+
+.empty h2 {
+    margin: 12px 0 6px
+}
+
+.confirmation {
+    padding: 40px 24px;
+    text-align: center;
+    min-height: 760px
+}
+
+.confirmation .panel {
+    text-align: left
+}
+
+.confirmation h1 {
+    margin: 8px 0
+}
+
+.check-circle {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background: var(--secondary);
+    display: grid;
+    place-items: center;
+    margin: 0 auto 24px
+}
+
+.check-circle .icon {
+    height: 40px;
+    width: 40px;
+    stroke-width: 3
+}
+
+.timeline {
+    list-style: none;
+    padding: 0;
+    margin: 14px 0 0
+}
+
+.timeline li {
+    display: grid;
+    grid-template-columns: 28px minmax(0, 1fr);
+    gap: 12px;
+    position: relative
+}
+
+.timeline .mark {
+    border-radius: 50%;
+    height: 28px;
+    width: 28px;
+    display: grid;
+    place-items: center;
+    background: var(--muted);
+    z-index: 1
+}
+
+.timeline li:before {
+    content: '';
+    position: absolute;
+    left: 13px;
+    top: 28px;
+    bottom: 0;
+    width: 2px;
+    background: var(--border)
+}
+
+.timeline li:last-child:before {
+    display: none
+}
+
+.timeline li.done:before,
+.timeline .done .mark {
+    background: var(--success);
+    color: var(--primary-foreground)
+}
+
+.timeline .active .mark {
+    background: var(--secondary)
+}
+
+.timeline .step {
+    padding-bottom: 22px
+}
+
+.timeline .step p:first-child {
+    font-weight: 600
+}
+
+.timeline .active .step p:first-child {
+    color: var(--primary)
+}
+
+.timeline .badge {
+    display: inline-block;
+    margin-top: 4px
+}
+
+.order-card {
+    display: block
+}
+
+.order-card h2 {
+    font-size: 16px;
+    overflow-wrap: anywhere
+}
+
+.progress {
+    height: 6px;
+    background: var(--muted);
+    border-radius: 20px;
+    margin-top: 12px;
+    overflow: hidden
+}
+
+.progress:before {
+    content: '';
+    display: block;
+    width: 33%;
+    height: 100%;
+    background: var(--secondary)
+}
+
+dialog {
+    max-width: calc(100% - 32px);
+    width: 384px;
+    background: var(--background);
+    color: var(--foreground);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: var(--shadow)
+}
+
+dialog::backdrop {
+    background: color-mix(in oklab, var(--foreground) 55%, transparent)
+}
+
+dialog h2 {
+    font-size: 22px
+}
+
+.dialog-close {
+    float: right;
+    width: 28px;
+    min-height: 28px;
+    padding: 0
+}
+
+.dialog-fields {
+    margin: 16px 0
+}
+
+.dialog-fields>*+* {
+    margin-top: 12px
+}
+
+#toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    max-width: calc(100% - 32px);
+    width: max-content;
+    padding: 12px 18px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    font-weight: 600
+}
+
+#toast:empty {
+    display: none
+}
+
+@media(max-width:639px) {
+    body {
+        padding: 0
+    }
+
+    .shell {
+        border: 0;
+        border-radius: 0;
+        min-height: 100vh
+    }
+
+    .cart-float {
+        bottom: 12px;
+        width: calc(100% - 32px)
+    }
+
+    .confirmation {
+        min-height: 100vh
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    * {
+        scroll-behavior: auto
+    }
+}
