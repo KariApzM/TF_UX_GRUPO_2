@@ -1,0 +1,726 @@
+
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"inverse-primary":"#afc6ff","primary":"#00255b","secondary-fixed":"#ffe08b","secondary-fixed-dim":"#f1c100","surface-bright":"#f8f9ff","on-tertiary-fixed-variant":"#003ea8","on-secondary-fixed":"#241a00","on-primary-fixed-variant":"#1a448c","tertiary":"#002264","surface-tint":"#375ca5","error":"#ba1a1a","primary-container":"#0a3a82","outline":"#747782","on-tertiary":"#ffffff","on-background":"#0b1c30","surface-variant":"#d3e4fe","surface-container-highest":"#d3e4fe","secondary":"#745b00","inverse-on-surface":"#eaf1ff","on-tertiary-container":"#87a4ff","background":"#f8f9ff","surface-container-lowest":"#ffffff","outline-variant":"#c4c6d2","on-primary-container":"#84a7f6","on-surface":"#0b1c30","on-primary-fixed":"#001944","on-secondary-fixed-variant":"#584400","primary-fixed":"#d9e2ff","surface-container-high":"#dce9ff","secondary-container":"#fecb00","on-error-container":"#93000a","on-error":"#ffffff","on-surface-variant":"#434751","on-secondary":"#ffffff","surface":"#f8f9ff","on-primary":"#ffffff","surface-container":"#e5eeff","on-tertiary-fixed":"#00174b","surface-dim":"#cbdbf5","surface-container-low":"#eff4ff","error-container":"#ffdad6","tertiary-fixed-dim":"#b4c5ff","on-secondary-container":"#6e5700","tertiary-fixed":"#dbe1ff","inverse-surface":"#213145","tertiary-container":"#003593","primary-fixed-dim":"#afc6ff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-mobile":"1rem","space-md":"0.75rem","gutter":"1rem","margin":"1.5rem","space-xs":"0.25rem","gutter-compact":"0.5rem","space-sm":"0.5rem","space-lg":"1.25rem","space-xl":"2rem"},"fontFamily":{"display-lg":["Plus Jakarta Sans"],"data-mono":["Inter"],"body-sm":["Inter"],"body-lg":["Inter"],"headline-lg":["Plus Jakarta Sans"],"label-sm":["Inter"],"price-mass":["Plus Jakarta Sans"],"body-md":["Inter"],"price-regular":["Inter"],"headline-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"label-md":["Inter"]},"fontSize":{"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"data-mono":["13px",{"lineHeight":"18px","letterSpacing":"0.02em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"price-mass":["16px",{"lineHeight":"20px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"price-regular":["12px",{"lineHeight":"16px","letterSpacing":"0em","fontWeight":"400"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-md":["13px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[260px] bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)] border-r-4 border-secondary-container"><div class="flex flex-col"><div class="h-[68px] px-gutter flex items-center gap-space-sm bg-surface-container-lowest border-b border-surface-container"><img alt="Logotipo Tiendas Mass" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WY98Lt46Vct57m7YyXAYguUFfP5Oc64yGm6jtuxHYGASo6wiVRtPOIkr24tGndWZDNcac2ERKogYMSXVQWyRg10YWVTgNdNNUIpYJrN6walrQlYYEteEKlRCMsukrrb2y8WgpeBtlZZThVEqEHIyk_1D8IXE2dqR5EB5R89OqE08Hh_NBboaKpii4SEqzccBAFmMeygUrCbwNMeQvsBqP5NI5uMYMqAYjP2b3AxmNAqxFO-InBeGg_h0hn"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">Tiendas Mass</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none mt-space-xs">Portal de Operaciones</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs mb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Menú Principal</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary text-on-primary font-semibold shadow-sm"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="catalogo" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span>Catálogo</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="precios" href="#"><span class="material-symbols-outlined text-[20px]">sell</span><span>Precios</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="inventario" href="#"><span class="material-symbols-outlined text-[20px]">warehouse</span><span>Inventario</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg transition-colors bg-primary text-on-primary font-semibold shadow-sm" data-path="pedidos" href="#"><span class="material-symbols-outlined text-[20px]">local_shipping</span><span>Pedidos</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="seguimiento" href="#"><span class="material-symbols-outlined text-[20px]">route</span><span>Seguimiento</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="reportes" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span>Reportes</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="configuracion" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Configuración</span></a></nav></div></div><div class="p-gutter border-t border-surface-container bg-surface-container-low/50"><div class="flex items-center justify-between mb-space-sm"><span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-fixed font-bold px-space-sm py-[2px] rounded-full">v2.4 Prototipo UX</span><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-[#16A34A]"></span><span class="font-label-sm text-label-sm text-on-surface-variant">SPSA</span></div></div><button class="w-full flex items-center justify-center gap-space-xs py-space-sm px-space-md bg-surface-container-lowest border border-outline-variant rounded-lg text-on-surface hover:bg-surface-container text-label-sm font-label-sm transition-colors" type="button"><span class="material-symbols-outlined text-[18px] text-primary">headset_mic</span><span>Soporte Técnico</span></button></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-[68px] bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-margin flex items-center justify-between border-b border-surface-container"><div class="flex-1 max-w-xl mr-gutter"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-space-md text-outline pointer-events-none text-[20px]">search</span><input class="w-full bg-surface-container-low text-on-surface placeholder:text-on-surface-variant pl-10 pr-12 py-space-sm rounded-lg border border-transparent focus:border-primary focus:bg-surface-container-lowest focus:outline-none font-body-md text-body-md transition-all" placeholder="Buscar por SKU, producto, pedido, cliente o tienda (Ctrl + K)..." type="text"/><kbd class="absolute right-space-md px-space-xs py-[2px] bg-surface-container-lowest text-on-surface-variant rounded border border-outline-variant font-data-mono text-[11px] shadow-sm">Ctrl+K</kbd></div></div><div class="flex items-center gap-gutter"><div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-xs rounded-lg border border-outline-variant cursor-pointer hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-primary text-[20px]">store</span><div class="flex flex-col text-left"><span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Tienda Mass #412 - Próceres, SJL (Lima)</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Cambiar sucursal</span></div><span class="material-symbols-outlined text-outline text-[18px]">expand_more</span></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-[#DCFCE7] text-[#15803D] rounded-full border border-[#BBF7D0]"><span class="w-2 h-2 rounded-full bg-[#16A34A] animate-pulse"></span><span class="font-label-sm text-label-sm font-semibold uppercase">En línea</span></div><button class="relative p-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 flex items-center justify-center min-w-[18px] h-[18px] px-1 bg-error text-on-error font-label-sm text-[10px] font-bold rounded-full">5</span></button><div class="h-8 w-px bg-outline-variant/50"></div><div class="flex items-center gap-space-sm pl-space-xs cursor-pointer group"><img alt="Profile" class="w-9 h-9 rounded-full object-cover ring-2 ring-secondary-container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBATwQUVPqEoA7RCzYWFzrqVWQiAgGPZD_dNwoeRij01BetWdL9Oy7ZuN2ZRDx_cT-eNJKMEhGDQy16tXOAdKgMW5KbFJxL3JBc_F6tYHMD65LsOLPhL4KtsRWNKwDTPpwacq0HLW8CzRPUCT9NNz8AWXPSepXvx6vGZ8VejmJqumy1rTHBQummpMo7k_GxXohr838efBwRtWfqu5O3_wSv9aIaSENvrWRDCSUHjZmgjc-J6iJ_eVcC8Q"/><div class="flex flex-col"><span class="font-label-md text-label-md font-bold text-on-surface group-hover:text-primary transition-colors leading-tight">Carlos Quispe M.</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Jefe de Operaciones</span></div><span class="material-symbols-outlined text-outline text-[18px] group-hover:text-on-surface transition-colors">arrow_drop_down</span></div></div></header><main class="w-full pt-[68px] min-h-screen bg-surface px-margin py-gutter"><div class="flex flex-col w-full gap-space-lg">
+<!-- Header & Breadcrumb Contextual -->
+<div class="flex flex-col gap-space-sm bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<!-- Breadcrumb -->
+<nav class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">local_shipping</span>
+<span>Pedidos</span>
+</a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-primary transition-colors" href="#">Órdenes de Reposición</a>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface font-semibold font-data-mono text-data-mono">PED-2024-8921</span>
+</nav>
+<!-- Title and Actions Toolbar -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-xs">
+<div class="flex items-center flex-wrap gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[24px]">pallet</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Pedido #PED-2024-8921</h1>
+<!-- Badges de Estado -->
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+                En Ruta / Despachado
+              </span>
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]">flag</span>
+                Prioridad Alta
+              </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Generado vía algoritmo de reposición automática SAP S/4HANA Retail</span>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<!-- Edit Order -->
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container font-label-md text-label-md transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">edit_note</span>
+<span>Editar Pedido</span>
+</button>
+<!-- Print Mass Slip / Guía -->
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-secondary-container text-on-secondary-fixed font-label-md text-label-md font-semibold hover:bg-secondary-fixed-dim transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+<span>Imprimir Guía de Remisión y Rotulado</span>
+</button>
+<!-- Subtle Destructive -->
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-error-container text-on-error-container hover:bg-error hover:text-on-error font-label-md text-label-md transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+<span>Cancelar Pedido</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Operational Alert & Realtime Driver Banner -->
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-r from-primary-container via-tertiary-container to-primary p-space-md text-on-primary shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-md z-10">
+<div class="w-12 h-12 rounded-lg bg-secondary-container text-on-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">local_shipping</span>
+</div>
+<div>
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm font-bold text-on-primary">Unidad en Tránsito - Llegada Estimada a Tienda #412: 14:15 hrs</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm font-bold">A tiempo (GPS Activo)</span>
+</div>
+<p class="font-body-sm text-body-sm text-surface-container-high opacity-90 mt-0.5">
+          Conductor Jorge Valenzuela reporta paso por Peaje Huánuco hacia San Juan de Lurigancho. Descarga programada por rampa 1.
+        </p>
+</div>
+</div>
+<div class="hidden xl:flex items-center gap-space-md z-10 pr-space-md">
+<div class="text-right">
+<span class="font-label-sm text-label-sm block text-surface-variant uppercase">Temperatura Termo-King</span>
+<span class="font-data-mono text-data-mono font-bold text-secondary-container">18.4°C (Carga Seca OK)</span>
+</div>
+<div class="w-px h-8 bg-surface-variant/30"></div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm block text-surface-variant uppercase">Precinto Activo</span>
+<span class="font-data-mono text-data-mono font-bold text-on-primary">#SL-9942</span>
+</div>
+</div>
+</div>
+<!-- Main 2-Column Content Layout -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Primary Details & Item Data (8 Cols) -->
+<div class="xl:col-span-8 flex flex-col gap-space-lg">
+<!-- TARJETA 1: Información General del Pedido -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg">
+<div class="flex items-center justify-between pb-space-md mb-space-md bg-surface-container-low -mx-space-lg -mt-space-lg p-space-lg rounded-t-xl">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">info</span>
+<h2 class="font-headline-md text-headline-md text-primary">Información General del Pedido</h2>
+</div>
+<span class="font-data-mono text-data-mono text-on-surface-variant px-space-sm py-0.5 bg-surface-container-lowest rounded">ID Interno: SPSA-LOG-9021-X</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-space-lg gap-x-space-md">
+<!-- Fecha de Emisión -->
+<div class="flex flex-col gap-1 p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-outline">schedule</span>
+              Fecha de Emisión
+            </span>
+<span class="font-data-mono text-data-mono font-bold text-on-surface">24/10/2024 08:30 AM</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Turno Apertura (AM)</span>
+</div>
+<!-- Tipo de Orden -->
+<div class="flex flex-col gap-1 p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">flash_on</span>
+              Tipo de Orden
+            </span>
+<span class="font-body-md text-body-md font-bold text-primary">Reabastecimiento Hard Discount</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Surtido de Alta Rotación</span>
+</div>
+<!-- Almacén de Origen -->
+<div class="flex flex-col gap-1 p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-outline">warehouse</span>
+              Almacén de Origen
+            </span>
+<span class="font-body-md text-body-md font-bold text-on-surface">CEDI Lurín - Bahía 4</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Km 38.5 Panamericana Sur</span>
+</div>
+<!-- Tienda Destino -->
+<div class="flex flex-col gap-1 p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">store</span>
+              Tienda Destino
+            </span>
+<span class="font-body-md text-body-md font-bold text-primary">Tienda Mass #412 Próceres</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Av. Próceres de la Indep. 102, SJL</span>
+</div>
+<!-- Transportista -->
+<div class="flex flex-col gap-1 p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-outline">commute</span>
+              Transportista
+            </span>
+<span class="font-body-md text-body-md font-bold text-on-surface">Flota InRetail Logistics</span>
+<div class="inline-flex items-center gap-1">
+<span class="font-data-mono text-data-mono px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-semibold">Placa B8F-912</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(Isuzu Forward)</span>
+</div>
+</div>
+<!-- Conductor Responsable -->
+<div class="flex flex-col gap-1 p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-outline">person_pin</span>
+              Conductor
+            </span>
+<span class="font-body-md text-body-md font-bold text-on-surface">Jorge Valenzuela R.</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Brevete A-IIIb • Cel: 984-219-034</span>
+</div>
+</div>
+</section>
+<!-- TARJETA 2: Productos Solicitados (Tabla detallada de ítems) -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="p-space-lg bg-surface-container-low flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">format_list_bulleted</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-primary leading-tight">Productos Solicitados</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">5 líneas de SKU consolidadas • 100% de cumplimiento en despacho CEDI</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm px-space-sm py-1 bg-surface-container-lowest text-primary rounded-full font-semibold shadow-sm">
+              Todos los precios incluyen IGV
+            </span>
+</div>
+</div>
+<!-- Tabla Densa de Ítems de Reposición -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high text-on-surface-variant font-label-md text-label-md">
+<th class="py-space-md px-space-md w-12 text-center">#</th>
+<th class="py-space-md px-space-md min-w-[240px]">Producto y SKU</th>
+<th class="py-space-md px-space-md">Categoría</th>
+<th class="py-space-md px-space-md text-center">Cant. Solicitada</th>
+<th class="py-space-md px-space-md text-center">Cant. Despachada</th>
+<th class="py-space-md px-space-md text-right">Precio Unit. Mass</th>
+<th class="py-space-md px-space-md text-right">Subtotal</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-md text-body-md">
+<!-- FILA 1 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-space-md px-space-md text-center font-data-mono text-on-surface-variant">01</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded object-cover shadow-sm bg-surface-container" data-alt="Paquete de arroz extra blanco de 5 kilogramos marca propia Mass sobre fondo de estudio con iluminación comercial retail limpia" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYQrxGxwP7PTHD96fC3HXwqyDjuvRhOy2P5J8fohpUjcbZ-lOEllDITIViggf_ACQBU41MgakyuhH_ls9e26nyerRllSypOtWBx9dd8mxeEVuzupIm3Ij-CuZ74mD1rSy1x75eIxNx7OOwfVLzB1JXCyClIcaYG8epu4cqOk199EraYdPkWoP2AW0R6q3m0WodHOD8imoIYuzBi8qXdOElW0gTNFOJy07tNtbRAETyRQPX9RhpmzpAhQ"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors font-semibold truncate">
+                        Arroz Extra Añejo Mass 5kg
+                      </span>
+<div class="flex items-center gap-space-xs">
+<span class="font-data-mono text-label-sm text-on-surface-variant">SKU: 775012398410</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Marca Mass</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                    Abarrotes
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<div class="font-data-mono text-data-mono font-medium text-on-surface">50 fardos</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(300 und)</span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<div class="inline-flex items-center gap-1 font-data-mono text-data-mono font-bold text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-[#16A34A]">check_circle</span>
+<span>50 fardos</span>
+</div>
+<div class="font-label-sm text-label-sm text-[#15803D]">300 und verif.</div>
+</td>
+<td class="py-space-md px-space-md text-right font-data-mono text-data-mono text-on-surface">
+                  S/ 18.90
+                </td>
+<td class="py-space-md px-space-md text-right font-data-mono text-data-mono font-bold text-primary">
+                  S/ 5,670.00
+                </td>
+</tr>
+<!-- FILA 2 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-space-md px-space-md text-center font-data-mono text-on-surface-variant">02</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded object-cover shadow-sm bg-surface-container" data-alt="Botella de aceite vegetal puro de soya 900 mililitros marca Mass etiqueta amarilla fondo neutro catálogo de supermercado" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxKYzJOK5A268Bd3KC9b9PLOvYSxpY0pjx27r8JNuM4M35gyxK4naeETKSUDIwQWuv2j2ayzaOG89-Xs-XtP97uc5jXhP7NdHrDz8Dy3JP-p5_DyhAJoppxJHeCq0Hp5cSATIbJKUq6Be1K06WGXYO7x8uG46PFL3MIiiOu48gWBhapwR8YmWre7sRNz-rwmWgA8RgHk0EuWFIDDngHegURufol1knpmBP94bIg9KZJla8haKquDq7Yg"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors font-semibold truncate">
+                        Aceite Vegetal Soya Mass 900ml
+                      </span>
+<div class="flex items-center gap-space-xs">
+<span class="font-data-mono text-label-sm text-on-surface-variant">SKU: 775012398555</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Marca Mass</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                    Aceites y Grasas
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<div class="font-data-mono text-data-mono font-medium text-on-surface">40 cajas</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(480 und)</span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<div class="inline-flex items-center gap-1 font-data-mono text-data-mono font-bold text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-[#16A34A]">check_circle</span>
+<span>40 cajas</span>
+</div>
+<div class="font-label-sm text-label-sm text-[#15803D]">480 und verif.</div>
+</td>
+<td class="py-space-md px-space-md text-right font-data-mono text-data-mono text-on-surface">
+                  S/ 6.50
+                </td>
+<td class="py-space-md px-space-md text-right font-data-mono text-data-mono font-bold text-primary">
+                  S/ 3,120.00
+                </td>
+</tr>
+<!-- FILA 3 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-space-md px-space-md text-center font-data-mono text-on-surface-variant">03</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded object-cover shadow-sm bg-surface-container" data-alt="Bolsa de detergente multiuso industrial en polvo 4.5kg marca Mass con aroma fresco sobre superficie clara retail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBodGsN1De6hDUNmSjy9pe27g7MQ2gcugE6q_4LhOoz7_i31jc8d8uv8xUAs5MeCnvVv45b5KeI2KM1qZBvC_k_QR4YtOPDVmsbY3F9oJwG-Tl5I_6yFJ-E5vQP7mx1S8sAMKQZzk0iCNDEKQiY2vFiKoDk2ThLGWSbJAu7NIPw1DZVh83wo0Xe7thhrUKvPh--Q8TqmpCHxd620iWuFClTP9jE9zTZ__fcO1wEdrN5E0SRvo1paG_DqQ"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors font-semibold truncate">
+                        Detergente Multiuso Mass 4.5kg
+                      </span>
+<div class="flex items-center gap-space-xs">
+<span class="font-data-mono text-label-sm text-on-surface-variant">SKU: 775012399120</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Limpieza Hogar</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                    Cuidado del Hogar
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<div class="font-data-mono text-data-mono font-medium text-on-surface">25 cajas</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(100 und)</span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<div class="inline-flex items-center gap-1 font-data-mono text-data-mono font-bold text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-[#16A34A]">check_circle</span>
+<span>25 cajas</span>
+</div>
+<div class="font-label-sm text-label-sm text-[#15803D]">100 und verif.</div>
+</td>
+<td class="py-space-md px-space-md text-right font-data-mono text-data-mono text-on-surface">
+                  S/ 23.90
+                </td>
+<td class="py-space-md px-space-md text-right font-data-mono text-data-mono font-bold text-primary">
+                  S/ 2,390.00
+                </td>
+</tr>
+<!-- FILA 4 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-space-md px-space-md text-center font-data-mono text-on-surface-variant">04</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded object-cover shadow-sm bg-surface-container" data-alt="Bolsa de azúcar rubia domestica 1kg marca Mass presentación limpia y transparente para tienda de descuento" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3YSRr7zmB_TVrHRjsNpTRiolxQtPrM0S1GfPOYAMr6YSJi2b2NJALojgguew1vTdf35KdhUck6WakMxfmgQT7y9zW1-8ViWpcyYsfOnwpdz49TvQmfcCePRhtgBP70bCOkhH7SXZyXI1nDALsxnovXxa7TOydG1GzHAnygnbJIjnew0Hu4t330dZjZgir06HjCBfQyAKeyyzHHi_jiiUx7qtgQMJnOKqkNoMuI965-YTp2QI5QR_JxQ"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors font-semibold truncate">
+                        Azúcar Rubia Doméstica Mass 1kg
+                      </span>
+<div class="flex items-center gap-space-xs">
+<span class="font-data-mono text-label-sm text-on-surface-variant">SKU: 775012397731</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Marca Mass</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                    Abarrotes
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<div class="font-data-mono text-data-mono font-medium text-on-surface">30 fardos</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(600 und)</span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<div class="inline-flex items-center gap-1 font-data-mono text-data-mono font-bold text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-[#16A34A]">check_circle</span>
+<span>30 fardos</span>
+</div>
+<div class="font-label-sm text-label-sm text-[#15803D]">600 und verif.</div>
+</td>
+<td class="py-space-md px-space-md text-right font-data-mono text-data-mono text-on-surface">
+                  S/ 3.20
+                </td>
+<td class="py-space-md px-space-md text-right font-data-mono text-data-mono font-bold text-primary">
+                  S/ 1,920.00
+                </td>
+</tr>
+<!-- FILA 5 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-space-md px-space-md text-center font-data-mono text-on-surface-variant">05</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded object-cover shadow-sm bg-surface-container" data-alt="Lata de leche evaporada entera 400 gramos etiqueta azul con logo de Mass en pack display producto de primera necesidad" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACTZLLc1stMbjYN_EGWF88YIGANOvLnWFQ1UtSVBr2ulURvr4zTZeX6oV2RfgIO4NL-fWsuyL8ecxps0okAKIRDdZ8B38fQRyKpBC3MvjbaKiJSTSqZqHGQKU0ont5kddoKxWYTtfWYaX-FWz-1ZNyaWyqRWTgcCqbbXatEkXwRInKI2QX7oLlt_qNw03x1AwMIs8wBDpPaQT89pxzej9dFEm7V4BvQBVe0Ya_PgGpn4gtzrTPnTkl_Q"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors font-semibold truncate">
+                        Leche Evaporada Entera Mass 400g
+                      </span>
+<div class="flex items-center gap-space-xs">
+<span class="font-data-mono text-label-sm text-on-surface-variant">SKU: 775012396112</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Lácteos</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                    Lácteos y Desayuno
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<div class="font-data-mono text-data-mono font-medium text-on-surface">40 bandejas</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(960 und)</span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<div class="inline-flex items-center gap-1 font-data-mono text-data-mono font-bold text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-[#16A34A]">check_circle</span>
+<span>40 bandejas</span>
+</div>
+<div class="font-label-sm text-label-sm text-[#15803D]">960 und verif.</div>
+</td>
+<td class="py-space-md px-space-md text-right font-data-mono text-data-mono text-on-surface">
+                  S/ 3.60
+                </td>
+<td class="py-space-md px-space-md text-right font-data-mono text-data-mono font-bold text-primary">
+                  S/ 3,456.00
+                </td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Footer de Tabla Resumen Rápido -->
+<div class="p-space-md bg-surface-container-low flex flex-wrap items-center justify-between text-on-surface-variant font-label-md text-label-md">
+<div class="flex items-center gap-space-md">
+<span>Total ítems: <strong class="text-on-surface">5 SKUs</strong></span>
+<span>Unidades totales: <strong class="text-on-surface">2,440 unidades</strong></span>
+<span>Bultos en camión: <strong class="text-on-surface">185 fardos/cajas</strong></span>
+</div>
+<div class="flex items-center gap-space-xs text-primary font-semibold">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Auditoría de picking completada sin mermas</span>
+</div>
+</div>
+</section>
+<!-- TARJETA 3: Observaciones e Incidencias en Recepción -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">assignment_late</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary">Observaciones e Incidencias en Recepción</h2>
+</div>
+<button class="text-primary font-label-sm text-label-sm font-semibold hover:underline flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+            Añadir Nota de Descarga
+          </button>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">security</span>
+</div>
+<div class="flex flex-col gap-1 w-full">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Instrucción Obligatoria de CEDI Lurín</span>
+<span class="font-data-mono text-data-mono text-on-surface-variant">Registrado 08:35 AM por Supervisor Almacén</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+              Mercadería paletizada según estándar Mass (estiba máxima 5 camas por parihuela EUR). Verificar integridad del precinto de seguridad <strong class="font-data-mono bg-surface-container-highest px-1.5 py-0.5 rounded text-primary">#SL-9942</strong> al arribo en tienda antes de romper sellado de compuerta posterior.
+            </p>
+<div class="flex items-center gap-space-md mt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-[#16A34A]">check</span> Pallets retractilados con film azul Mass</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-outline">timer</span> Tiempo estimado de estiba en rampa: 25 min</span>
+</div>
+</div>
+</div>
+<!-- Incidencias Rápidas Selector -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm pt-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-[#16A34A]">inventory</span>
+<span class="font-body-sm text-body-sm text-on-surface">Parihuelas intactas</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-[#15803D]">4 / 4 OK</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-[#16A34A]">verified_user</span>
+<span class="font-body-sm text-body-sm text-on-surface">Sello termo</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-[#15803D]">Validado CEDI</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">warning_amber</span>
+<span class="font-body-sm text-body-sm text-on-surface">Mermas reportadas</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">0 registros</span>
+</div>
+</div>
+</section>
+</div>
+<!-- RIGHT COLUMN: Summary, Tracking & Documents (4 Cols) -->
+<div class="xl:col-span-4 flex flex-col gap-space-lg">
+<!-- TARJETA: Resumen de Importes -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col">
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">receipt_long</span>
+<h2 class="font-headline-md text-headline-md text-primary">Resumen de Importes</h2>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold px-2 py-0.5 rounded bg-secondary-fixed">Soles (PEN)</span>
+</div>
+<div class="flex flex-col gap-space-sm text-body-md font-body-md">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Subtotal Bruto (Sin IGV)</span>
+<span class="font-data-mono text-data-mono font-medium text-on-surface">S/ 14,030.51</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span>IGV (18.00%)</span>
+<span class="material-symbols-outlined text-[14px] text-outline" title="Impuesto General a las Ventas">help</span>
+</span>
+<span class="font-data-mono text-data-mono font-medium text-on-surface">S/ 2,525.49</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant pb-space-sm">
+<span class="flex items-center gap-1">
+<span>Costo Logístico Interno</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] bg-surface-container font-semibold">Subsidio SPSA</span>
+</span>
+<span class="font-data-mono text-data-mono font-medium text-[#15803D]">S/ 0.00 (Bonif.)</span>
+</div>
+<!-- Total General Callout con Highlight Amarillo Sutil -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-1 relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-secondary-container/20 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface-variant tracking-wider">Total General Liquidado</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-secondary-container text-on-secondary-fixed font-bold">Precio Mass Retail</span>
+</div>
+<div class="flex items-baseline justify-between pt-1">
+<span class="font-headline-sm text-headline-sm font-semibold text-primary">Importe Total:</span>
+<span class="font-display-lg text-display-lg text-primary font-bold tracking-tight">S/ 16,556.00</span>
+</div>
+</div>
+<!-- Metadatos de Carga / Bultos y Peso -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low text-center flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Volumen Carga</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary mt-0.5">185 bultos</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">4 pallets base</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low text-center flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Peso Báscula</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary mt-0.5">3,240 kg</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tara camión OK</span>
+</div>
+</div>
+</div>
+</section>
+<!-- TARJETA: Seguimiento Rápido de Estado (Timeline Vertical) -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col">
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">route</span>
+<h2 class="font-headline-md text-headline-md text-primary">Seguimiento de Reposición</h2>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-[#16A34A] animate-pulse" title="Actualización continua"></span>
+</div>
+<div class="relative pl-6 space-y-space-md">
+<!-- Línea vertical conectora -->
+<div class="absolute left-2.5 top-2 bottom-3 w-0.5 bg-surface-container-high -translate-x-1/2"></div>
+<!-- Step 1: Pedido Creado -->
+<div class="relative flex items-start gap-space-sm group">
+<div class="absolute -left-6 top-0.5 w-5 h-5 rounded-full bg-[#16A34A] text-on-primary flex items-center justify-center -translate-x-1/2 shadow-sm">
+<span class="material-symbols-outlined text-[13px] font-bold">check</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Pedido Creado</span>
+<span class="font-data-mono text-label-sm text-on-surface-variant">08:30 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Generación por módulo automatizado Tiendas Mass</p>
+</div>
+</div>
+<!-- Step 2: Aprobado por Planificación -->
+<div class="relative flex items-start gap-space-sm group">
+<div class="absolute -left-6 top-0.5 w-5 h-5 rounded-full bg-[#16A34A] text-on-primary flex items-center justify-center -translate-x-1/2 shadow-sm">
+<span class="material-symbols-outlined text-[13px] font-bold">check</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Aprobado por Planificación</span>
+<span class="font-data-mono text-label-sm text-on-surface-variant">09:15 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Validado por Demanda y Control de Inventarios</p>
+</div>
+</div>
+<!-- Step 3: Picking y Paletizado CEDI -->
+<div class="relative flex items-start gap-space-sm group">
+<div class="absolute -left-6 top-0.5 w-5 h-5 rounded-full bg-[#16A34A] text-on-primary flex items-center justify-center -translate-x-1/2 shadow-sm">
+<span class="material-symbols-outlined text-[13px] font-bold">check</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Picking y Paletizado CEDI</span>
+<span class="font-data-mono text-label-sm text-on-surface-variant">11:20 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Lurín Bahía 4: 4 parihuelas preparadas y flejadas</p>
+</div>
+</div>
+<!-- Step 4: Despachado en Camión -->
+<div class="relative flex items-start gap-space-sm group">
+<div class="absolute -left-6 top-0.5 w-5 h-5 rounded-full bg-[#16A34A] text-on-primary flex items-center justify-center -translate-x-1/2 shadow-sm">
+<span class="material-symbols-outlined text-[13px] font-bold">check</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Despachado en Camión</span>
+<span class="font-data-mono text-label-sm text-on-surface-variant">12:45 PM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Placa B8F-912 cargado e inspeccionado en garita de control</p>
+</div>
+</div>
+<!-- Step 5: En Ruta (Activo ahora) -->
+<div class="relative flex items-start gap-space-sm p-space-sm rounded-lg bg-primary-fixed/30 -ml-2">
+<div class="absolute -left-4 top-2.5 w-5 h-5 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center -translate-x-1/2 shadow-sm animate-bounce">
+<span class="material-symbols-outlined text-[14px] font-bold">local_shipping</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">En Ruta a Tienda #412</span>
+<span class="px-1.5 py-0.2 rounded bg-secondary-container text-on-secondary-fixed font-data-mono text-[11px] font-bold">ACTIVO</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium mt-0.5">
+                Llegada estimada a bahía de descarga: <strong class="text-primary font-bold">02:15 PM</strong>
+</p>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 mt-2 overflow-hidden">
+<div class="bg-primary h-1.5 rounded-full" style="width: 78%;"></div>
+</div>
+</div>
+</div>
+<!-- Step 6: Recepción en Tienda (Pendiente) -->
+<div class="relative flex items-start gap-space-sm opacity-60">
+<div class="absolute -left-6 top-1 w-5 h-5 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center -translate-x-1/2">
+<span class="material-symbols-outlined text-[13px]">radio_button_unchecked</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Recepción en Tienda Mass #412</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Conformidad física de bultos y validación de inventario en POS</p>
+</div>
+</div>
+</div>
+</section>
+<!-- TARJETA: Documentos Adjuntos -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">folder_open</span>
+<h2 class="font-headline-md text-headline-md text-primary">Documentos Adjuntos</h2>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface-variant">3 Archivos</span>
+</div>
+<!-- Lista de Documentos -->
+<div class="flex flex-col gap-space-xs">
+<!-- Doc 1: Guía de Remisión -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors group">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface group-hover:text-primary transition-colors truncate">
+                  Guia_Remision_GR-002-94812.pdf
+                </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">1.2 MB • Firmada digitalmente SUNAT</span>
+</div>
+</div>
+<button class="p-space-xs text-outline hover:text-primary hover:bg-surface-container-lowest rounded-lg transition-colors" title="Descargar PDF" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+</div>
+<!-- Doc 2: Manifiesto de Carga -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors group">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface group-hover:text-primary transition-colors truncate">
+                  Manifiesto_Carga_Lurin.pdf
+                </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">850 KB • Sello Báscula Entrada</span>
+</div>
+</div>
+<button class="p-space-xs text-outline hover:text-primary hover:bg-surface-container-lowest rounded-lg transition-colors" title="Descargar PDF" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+</div>
+<!-- Doc 3: Acta Control Calidad -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors group">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface group-hover:text-primary transition-colors truncate">
+                  Acta_Control_Calidad.pdf
+                </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">420 KB • Certificado Lote Mass</span>
+</div>
+</div>
+<button class="p-space-xs text-outline hover:text-primary hover:bg-surface-container-lowest rounded-lg transition-colors" title="Descargar PDF" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+</div>
+</div>
+<!-- Botón para Adjuntar Nuevo Documento -->
+<button class="w-full flex items-center justify-center gap-space-xs py-space-sm px-space-md rounded-lg bg-surface-container text-primary font-label-md text-label-md font-semibold hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">upload_file</span>
+<span>Adjuntar nuevo documento</span>
+</button>
+</section>
+<!-- Mini KPI de Efectividad de Entrega -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-secondary-container text-on-secondary-fixed flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[20px]">speed</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-bold block">SLA de Reposición Mass</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Cumplimiento 99.4%</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-1 rounded bg-[#DCFCE7] text-[#15803D] font-bold">+1.8% vs CEDI Lurín</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interactions for UX prototype fidelity
+  document.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      // Don't execute if default prevented
+      const rippleText = btn.querySelector('span:not(.material-symbols-outlined)')?.innerText;
+      if (rippleText && (rippleText.includes('Imprimir') || rippleText.includes('Editar'))) {
+        console.log('Operación Mass Backoffice ejecutada:', rippleText);
+      }
+    });
+  });
+</script></main></div></body></html>
+

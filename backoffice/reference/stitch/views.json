@@ -1,0 +1,226 @@
+[
+  {
+    "view": "Desktop-Catálogo",
+    "title": [
+      "Catálogo de Productos"
+    ],
+    "forms": 10,
+    "buttons": 43,
+    "tables": 1,
+    "svg": 0
+  },
+  {
+    "view": "Desktop-Dashboard",
+    "title": [
+      "Dashboard Operativo",
+      "Ventas y Pedidos Semanales",
+      "Estado de Pedidos",
+      "Stock Crítico en Góndola",
+      "Pedidos Recientes"
+    ],
+    "forms": 1,
+    "buttons": 17,
+    "tables": 2,
+    "svg": 6
+  },
+  {
+    "view": "Desktop-Detalle-pedido",
+    "title": [
+      "Pedido #PED-2024-8921",
+      "Información General del Pedido",
+      "Productos Solicitados",
+      "Observaciones e Incidencias en Recepción",
+      "Resumen de Importes",
+      "Seguimiento de Reposición",
+      "Documentos Adjuntos"
+    ],
+    "forms": 1,
+    "buttons": 10,
+    "tables": 1,
+    "svg": 0
+  },
+  {
+    "view": "Desktop-Editar-producto",
+    "title": [
+      "Editar Producto: Arroz Extra Añejo Mass 5kg",
+      "1. Información General",
+      "2. Precios y Estrategia Mass (Hard Discount)",
+      "3. Control de Stock y Parámetros de Reposición",
+      "4. Promociones y Campañas Comerciales",
+      "Fleje de Góndola",
+      "Imágenes del Producto",
+      "Estado y Canales"
+    ],
+    "forms": 14,
+    "buttons": 13,
+    "tables": 0,
+    "svg": 0
+  },
+  {
+    "view": "Desktop-Inventario",
+    "title": [
+      "Control de Inventario y Existencias",
+      "Tendencia de Stock y Nivel de Servicio",
+      "Kardex Reciente",
+      "Detalle de SKUs en Tienda"
+    ],
+    "forms": 2,
+    "buttons": 26,
+    "tables": 1,
+    "svg": 1
+  },
+  {
+    "view": "Desktop-Login",
+    "title": [
+      "\n          Portal de Operaciones Retail Mass\n        ",
+      "Iniciar Sesión"
+    ],
+    "forms": 3,
+    "buttons": 3,
+    "tables": 0,
+    "svg": 2
+  },
+  {
+    "view": "Desktop-Pedidos",
+    "title": [
+      "Gestión de Pedidos de Reabastecimiento y Ventas",
+      "Volumen Semanal Despachado",
+      "Distribución de Estados en Vivo"
+    ],
+    "forms": 9,
+    "buttons": 37,
+    "tables": 1,
+    "svg": 0
+  },
+  {
+    "view": "Desktop-Precios",
+    "title": [
+      "\n        Gestión de Precios y Competitividad Hard Discount\n      ",
+      "Previsualización de Fleje de Góndola Mass (105 x 42 mm)",
+      "Monitoreo de Canasta Básica vs Cadena",
+      "Producto Seleccionado"
+    ],
+    "forms": 11,
+    "buttons": 42,
+    "tables": 1,
+    "svg": 1
+  },
+  {
+    "view": "Desktop-Reportes",
+    "title": [
+      "Reportes y Analítica Operativa",
+      "Evolución de Ventas vs Meta Diaria",
+      "Ventas por Categoría",
+      "Auditoría de Rendimiento por SKU y Pasillo"
+    ],
+    "forms": 2,
+    "buttons": 19,
+    "tables": 1,
+    "svg": 3
+  },
+  {
+    "view": "Desktop-Seguimiento",
+    "title": [
+      "Seguimiento de Despacho y Cadena de Suministro",
+      "Progreso de Entrega y Control de Cadena",
+      "Transporte y Tripulación Asignada",
+      "Bitácora de Telemetría e Incidentes"
+    ],
+    "forms": 1,
+    "buttons": 9,
+    "tables": 0,
+    "svg": 1
+  },
+  {
+    "view": "Mobile-Catálogo",
+    "title": [
+      "Arroz Extra Añejo Mass 5kg",
+      "Aceite Vegetal 100% Soya Mass 900ml",
+      "Leche Evaporada Entera Mass 400g",
+      "Detergente Floral Mass 4.5kg",
+      "Fideos Spaghetti Mass 450g"
+    ],
+    "forms": 2,
+    "buttons": 24,
+    "tables": 0,
+    "svg": 0
+  },
+  {
+    "view": "Mobile-Dashboard",
+    "title": [
+      "Tendencia Semanal de Pedidos",
+      "Estado de Pedidos Hoy",
+      "Stock Crítico en Góndola",
+      "Arroz Extra Mass 5kg",
+      "Aceite Vegetal Del Sol 900ml",
+      "Detergente Floral Mass 4.5kg",
+      "Pedidos Recientes en Tienda"
+    ],
+    "forms": 0,
+    "buttons": 9,
+    "tables": 0,
+    "svg": 2
+  },
+  {
+    "view": "Mobile-Detalle-pedido",
+    "title": [
+      "Detalle Pedido",
+      "PED-2024-8921",
+      "Resumen de Importes",
+      "Seguimiento de Reposición",
+      "Productos Solicitados",
+      "Documentos y Actas"
+    ],
+    "forms": 0,
+    "buttons": 10,
+    "tables": 0,
+    "svg": 0
+  },
+  {
+    "view": "Mobile-Editar-producto",
+    "title": [
+      "Editar Producto",
+      "Editar Producto: Arroz Extra Mass 5kg"
+    ],
+    "forms": 10,
+    "buttons": 9,
+    "tables": 0,
+    "svg": 0
+  },
+  {
+    "view": "Mobile-Inventario",
+    "title": [],
+    "forms": 0,
+    "buttons": 19,
+    "tables": 0,
+    "svg": 1
+  },
+  {
+    "view": "Mobile-Login",
+    "title": [
+      "Iniciar Sesión"
+    ],
+    "forms": 3,
+    "buttons": 5,
+    "tables": 0,
+    "svg": 1
+  },
+  {
+    "view": "Mobile-Pedidos",
+    "title": [],
+    "forms": 1,
+    "buttons": 16,
+    "tables": 0,
+    "svg": 0
+  },
+  {
+    "view": "Mobile-Seguimiento",
+    "title": [
+      "Seguimiento"
+    ],
+    "forms": 0,
+    "buttons": 6,
+    "tables": 0,
+    "svg": 1
+  }
+]

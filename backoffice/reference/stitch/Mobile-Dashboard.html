@@ -1,0 +1,433 @@
+
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>Tiendas Mass - Backoffice</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 500,'GRAD' 0,'opsz' 24;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-container": "#0a3a82", "on-secondary-fixed": "#241a00", "on-tertiary-container": "#87a4ff", "error-container": "#ffdad6", "on-primary": "#ffffff", "on-tertiary": "#ffffff", "on-primary-container": "#84a7f6", "surface-variant": "#d3e4fe", "tertiary-fixed-dim": "#b4c5ff", "inverse-primary": "#afc6ff", "background": "#f8f9ff", "on-error": "#ffffff", "error": "#ba1a1a", "surface-container-low": "#eff4ff", "primary-fixed-dim": "#afc6ff", "on-secondary-container": "#6e5700", "secondary-fixed-dim": "#f1c100", "outline": "#747782", "surface-container-high": "#dce9ff", "surface-container-lowest": "#ffffff", "primary": "#00255b", "surface": "#f8f9ff", "inverse-on-surface": "#eaf1ff", "surface-container": "#e5eeff", "surface-tint": "#375ca5", "outline-variant": "#c4c6d2", "secondary-container": "#fecb00", "tertiary": "#002264", "tertiary-fixed": "#dbe1ff", "on-primary-fixed-variant": "#1a448c", "surface-container-highest": "#d3e4fe", "on-secondary-fixed-variant": "#584400", "tertiary-container": "#003593", "on-tertiary-fixed-variant": "#003ea8", "surface-dim": "#cbdbf5", "secondary": "#745b00", "on-background": "#0b1c30", "on-tertiary-fixed": "#00174b", "on-surface-variant": "#434751", "on-secondary": "#ffffff", "on-primary-fixed": "#001944", "on-surface": "#0b1c30", "secondary-fixed": "#ffe08b", "inverse-surface": "#213145", "primary-fixed": "#d9e2ff", "on-error-container": "#93000a", "surface-bright": "#f8f9ff" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter-compact": "0.5rem", "space-md": "0.75rem", "space-xs": "0.25rem", "margin-mobile": "1rem", "space-sm": "0.5rem", "space-xl": "2rem", "margin": "1.5rem", "gutter": "1rem", "space-lg": "1.25rem" }, "fontFamily": { "headline-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-md": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "data-mono": ["Inter"], "body-lg": ["Inter"], "price-mass": ["Plus Jakarta Sans"], "label-sm": ["Inter"], "display-lg": ["Plus Jakarta Sans"], "price-regular": ["Inter"], "body-sm": ["Inter"], "label-md": ["Inter"] }, "fontSize": { "headline-md": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "headline-sm": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600"}], "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400"}], "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700"}], "data-mono": ["13px", {"lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500"}], "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}], "price-mass": ["16px", {"lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600"}], "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "price-regular": ["12px", {"lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400"}], "body-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400"}], "label-md": ["13px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500"}] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background font-body-md text-on-surface antialiased flex flex-col min-h-screen selection:bg-secondary-container selection:text-on-secondary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><div class="flex items-center justify-center bg-secondary-container px-2 py-1 rounded-lg shrink-0"><span class="font-headline-lg text-primary-container font-extrabold tracking-tighter lowercase leading-none">mass</span></div><button class="flex items-center gap-1 min-h-[44px] px-2 py-1 bg-surface-container-lowest/80 rounded-xl hover:bg-surface-container-high transition-colors min-w-0 text-left" type="button"><div class="flex flex-col min-w-0"><span class="font-label-sm text-on-surface-variant uppercase tracking-wider truncate">Local Activo</span><div class="flex items-center gap-1 min-w-0"><span class="font-headline-sm text-primary font-bold truncate">#412 Próceres</span><span class="material-symbols-outlined text-[16px] text-primary shrink-0">expand_more</span></div></div></button></div><div class="flex items-center gap-1 shrink-0"><button aria-label="Notificaciones" class="relative w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors rounded-full" type="button"><span class="material-symbols-outlined text-[24px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-1 pl-1"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-28 px-margin-mobile bg-background min-h-screen"><div class="flex flex-col w-full pb-24 gap-space-md">
+<!-- Sub-header Operativo & Switcher de Turno -->
+<div class="flex items-center justify-between gap-space-sm bg-surface-container-low p-space-sm rounded-xl">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="inline-flex items-center gap-1 bg-surface-container-highest text-primary font-label-sm px-2 py-1 rounded-full shrink-0">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+        Turno Mañana
+      </span>
+<span class="font-label-sm text-on-surface-variant truncate">07:00 - 15:30</span>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<span class="bg-primary text-on-primary font-label-sm font-semibold px-2 py-0.5 rounded-full uppercase tracking-wider">
+        Hard Discount Ops
+      </span>
+</div>
+</div>
+<!-- Selector Temporal Compacto + Acción Rápida -->
+<div class="flex items-center justify-between gap-space-sm">
+<div class="flex items-center p-0.5 bg-surface-container rounded-lg" id="time-range-tabs">
+<button class="tab-btn px-3 py-1.5 rounded-lg bg-surface-container-lowest text-primary font-label-md font-semibold shadow-sm transition-all" data-period="hoy" type="button">
+        Hoy
+      </button>
+<button class="tab-btn px-3 py-1.5 rounded-lg text-on-surface-variant font-label-md transition-all hover:text-primary" data-period="7d" type="button">
+        7 días
+      </button>
+<button class="tab-btn px-3 py-1.5 rounded-lg text-on-surface-variant font-label-md transition-all hover:text-primary" data-period="mes" type="button">
+        Este mes
+      </button>
+</div>
+<button class="flex items-center gap-1.5 px-3 py-1.5 bg-secondary-container hover:bg-secondary-fixed text-on-secondary-fixed font-headline-sm font-bold rounded-lg shadow-sm active:scale-95 transition-all shrink-0" id="btn-export-report" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span class="font-label-sm uppercase tracking-wide">Reporte</span>
+</button>
+</div>
+<!-- Grid 2x2 KPIs Esenciales -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- KPI 1: Productos Activos -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-on-surface-variant uppercase tracking-wider truncate">Prod. Activos</span>
+<div class="w-6 h-6 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[15px] text-primary">sell</span>
+</div>
+</div>
+<div class="font-headline-lg text-on-surface tracking-tight leading-none mb-1">3,842</div>
+<div class="flex items-center gap-1 font-label-sm text-[#15803D]">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+<span class="font-semibold">+4.2%</span>
+<span class="text-on-surface-variant font-normal">sem.</span>
+</div>
+</div>
+<!-- KPI 2: Stock Crítico (Alerta Mass) -->
+<div class="bg-error-container/30 p-space-sm rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-error uppercase tracking-wider truncate">Stock Crítico</span>
+<span class="bg-error text-on-error font-label-sm font-bold px-1.5 py-0.2 rounded-full uppercase">
+          Urgente
+        </span>
+</div>
+<div class="font-headline-lg text-error tracking-tight leading-none mb-1">28 SKUs</div>
+<div class="flex items-center gap-1 font-label-sm text-error font-medium">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+<span class="truncate">Góndolas sin tope</span>
+</div>
+</div>
+<!-- KPI 3: Pedidos en Proceso -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-on-surface-variant uppercase tracking-wider truncate">En Proceso</span>
+<div class="w-6 h-6 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[15px] text-tertiary">forklift</span>
+</div>
+</div>
+<div class="font-headline-lg text-on-surface tracking-tight leading-none mb-1">64 peds</div>
+<div class="font-label-sm text-primary font-semibold truncate">
+        Monto: S/ 24,850
+      </div>
+</div>
+<!-- KPI 4: Entregados / SLA -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-on-surface-variant uppercase tracking-wider truncate">Entregados</span>
+<div class="w-6 h-6 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[15px] text-[#15803D]">check_circle</span>
+</div>
+</div>
+<div class="font-headline-lg text-on-surface tracking-tight leading-none mb-1">312</div>
+<div class="flex items-center gap-1 font-label-sm text-[#15803D] font-bold">
+<span>SLA 98.4%</span>
+<span class="text-on-surface-variant font-normal">hoy</span>
+</div>
+</div>
+</div>
+<!-- Gráfico Semanal de Ventas y Pedidos -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-primary">Tendencia Semanal de Pedidos</h2>
+<p class="font-body-sm text-on-surface-variant">Lunes a Domingo vs. Meta diaria (400)</p>
+</div>
+<span class="bg-secondary-container text-on-secondary-fixed font-label-sm font-bold px-2 py-0.5 rounded-md">
+        +8.6%
+      </span>
+</div>
+<!-- SVG Bar Chart con Línea Punteada de Meta -->
+<div class="w-full h-36 relative mt-1">
+<svg aria-label="Gráfico de barras de pedidos diarios" class="w-full h-full" preserveaspectratio="none" viewbox="0 0 320 120">
+<!-- Guías horizontales de fondo -->
+<line stroke="#E2E8F0" stroke-width="1" x1="0" x2="320" y1="20" y2="20"></line>
+<line stroke="#E2E8F0" stroke-width="1" x1="0" x2="320" y1="60" y2="60"></line>
+<line stroke="#E2E8F0" stroke-width="1" x1="0" x2="320" y1="100" y2="100"></line>
+<!-- Línea Punteada Meta (Meta = 400 pedidos) -->
+<line opacity="0.85" stroke="#BA1A1A" stroke-dasharray="4 3" stroke-width="1.5" x1="0" x2="320" y1="36" y2="36"></line>
+<text class="font-label-sm" fill="#BA1A1A" font-size="9" font-weight="700" x="260" y="32">META: 400</text>
+<!-- Barras Lunes a Domingo (Primary: #00255b, Destacado amarillo Mass: #fecb00) -->
+<!-- LUN -->
+<rect fill="#0A3A82" height="56" rx="3" width="22" x="18" y="44"></rect>
+<text fill="#434751" font-family="Inter" font-size="9" text-anchor="middle" x="29" y="114">L</text>
+<!-- MAR -->
+<rect fill="#0A3A82" height="62" rx="3" width="22" x="62" y="38"></rect>
+<text fill="#434751" font-family="Inter" font-size="9" text-anchor="middle" x="73" y="114">M</text>
+<!-- MIE -->
+<rect fill="#0A3A82" height="48" rx="3" width="22" x="106" y="52"></rect>
+<text fill="#434751" font-family="Inter" font-size="9" text-anchor="middle" x="117" y="114">M</text>
+<!-- JUE -->
+<rect fill="#0A3A82" height="70" rx="3" width="22" x="150" y="30"></rect>
+<text fill="#434751" font-family="Inter" font-size="9" text-anchor="middle" x="161" y="114">J</text>
+<!-- VIE -->
+<rect fill="#0A3A82" height="76" rx="3" width="22" x="194" y="24"></rect>
+<text fill="#434751" font-family="Inter" font-size="9" text-anchor="middle" x="205" y="114">V</text>
+<!-- SAB (Pico Mass) -->
+<rect fill="#FECB00" height="84" rx="3" width="22" x="238" y="16"></rect>
+<text fill="#0B1C30" font-family="Inter" font-size="9" font-weight="700" text-anchor="middle" x="249" y="114">S</text>
+<!-- DOM (Hoy activo) -->
+<rect fill="#00255B" height="72" rx="3" width="22" x="282" y="28"></rect>
+<text fill="#00255B" font-family="Inter" font-size="9" font-weight="700" text-anchor="middle" x="293" y="114">D</text>
+</svg>
+</div>
+<div class="flex items-center justify-between pt-1 border-t-0 text-on-surface-variant font-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-primary-container"></span>
+<span>Flujo Regular</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-secondary-container"></span>
+<span>Sábado Pico (+S/ 38k)</span>
+</div>
+</div>
+</div>
+<!-- Estado de Pedidos Hoy (Donut Chart Compacto + Leyenda) -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-3">
+<div>
+<h2 class="font-headline-sm text-primary">Estado de Pedidos Hoy</h2>
+<span class="font-body-sm text-on-surface-variant">Progreso del turno actual</span>
+</div>
+<span class="bg-surface-container-high text-primary font-data-mono px-2 py-0.5 rounded text-xs font-semibold">
+        Total: 381
+      </span>
+</div>
+<div class="flex items-center gap-space-md">
+<!-- Donut SVG -->
+<div class="relative w-28 h-28 shrink-0 flex items-center justify-center">
+<svg class="w-28 h-28 -rotate-90" viewbox="0 0 36 36">
+<!-- Fondo -->
+<circle cx="18" cy="18" fill="none" r="14" stroke="#EFF4FF" stroke-width="5"></circle>
+<!-- Segmento 1: Entregados 38% (C = 87.96 -> 33.42) stroke: #15803D -->
+<circle cx="18" cy="18" fill="none" r="14" stroke="#16A34A" stroke-dasharray="33.4 88" stroke-dashoffset="0" stroke-width="5"></circle>
+<!-- Segmento 2: En Ruta 35% (30.78) stroke: #0A3A82 -->
+<circle cx="18" cy="18" fill="none" r="14" stroke="#0A3A82" stroke-dasharray="30.8 88" stroke-dashoffset="-33.4" stroke-width="5"></circle>
+<!-- Segmento 3: Picking 22% (19.35) stroke: #FECB00 -->
+<circle cx="18" cy="18" fill="none" r="14" stroke="#FECB00" stroke-dasharray="19.4 88" stroke-dashoffset="-64.2" stroke-width="5"></circle>
+<!-- Segmento 4: Críticos 5% (4.4) stroke: #DC2626 -->
+<circle cx="18" cy="18" fill="none" r="14" stroke="#DC2626" stroke-dasharray="4.4 88" stroke-dashoffset="-83.6" stroke-width="5"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+<span class="font-headline-sm text-primary leading-none">381</span>
+<span class="font-label-sm text-on-surface-variant uppercase text-[9px]">Peds</span>
+</div>
+</div>
+<!-- Leyenda de datos táctil -->
+<div class="flex flex-col gap-1.5 flex-1 min-w-0">
+<div class="flex items-center justify-between text-xs">
+<div class="flex items-center gap-1.5 truncate">
+<span class="w-2.5 h-2.5 rounded-full bg-[#16A34A] shrink-0"></span>
+<span class="text-on-surface truncate">Entregados</span>
+</div>
+<span class="font-data-mono font-semibold text-on-surface shrink-0">145 (38%)</span>
+</div>
+<div class="flex items-center justify-between text-xs">
+<div class="flex items-center gap-1.5 truncate">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container shrink-0"></span>
+<span class="text-on-surface truncate">En Ruta Mass</span>
+</div>
+<span class="font-data-mono font-semibold text-on-surface shrink-0">133 (35%)</span>
+</div>
+<div class="flex items-center justify-between text-xs">
+<div class="flex items-center gap-1.5 truncate">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container shrink-0"></span>
+<span class="text-on-surface truncate">En Picking</span>
+</div>
+<span class="font-data-mono font-semibold text-on-surface shrink-0">84 (22%)</span>
+</div>
+<div class="flex items-center justify-between text-xs">
+<div class="flex items-center gap-1.5 truncate">
+<span class="w-2.5 h-2.5 rounded-full bg-error shrink-0"></span>
+<span class="text-error font-medium truncate">Críticos / Retraso</span>
+</div>
+<span class="font-data-mono font-bold text-error shrink-0">19 (5%)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Stock Crítico en Góndola: Tarjetas Táctiles Móviles -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-error text-[20px]">notification_important</span>
+<h2 class="font-headline-sm text-on-surface">Stock Crítico en Góndola</h2>
+</div>
+<span class="bg-error-container text-error font-label-sm font-bold px-2 py-0.5 rounded-full">
+        3 prioritarios
+      </span>
+</div>
+<!-- Card 1: Arroz Extra Mass 5kg -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col gap-2">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap- space-sm min-w-0">
+<img class="w-12 h-12 rounded-lg object-cover bg-surface-container shrink-0" data-alt="Bolsa de arroz extra Mass de 5 kilogramos empaque blanco con franjas amarillas sobre fondo neutro de almacén retail iluminación suave producto comercial peruano" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbg_ntWg-MRELD_4fu0bjutzxsCPF-xVyPsfoGvbcv9q33w1b5-eYkE5YrN3vQ7gb9_NYZkvpUolZTROlTo7S5ExiCa42zSKNVr8UKKDDAthJlhvRSwG4NPHJMrNpzQi8km73fVt0relwGN4Nsx3SqWCIrRngyK43N6pr4emqkSlW7TxMJIJ1pm7zJQK6gdLcK4nioLAEr4NmrYPK6CcGazDBPhQF7DCTXoGY8-MayUCpXHYZYkOmAZA"/>
+<div class="min-w-0">
+<h3 class="font-headline-sm text-primary text-[14px] leading-tight truncate">Arroz Extra Mass 5kg</h3>
+<span class="font-data-mono text-on-surface-variant text-[11px] block">SKU-88210 • Pasillo 03A</span>
+</div>
+</div>
+<span class="bg-[#FEE2E2] text-[#991B1B] font-label-sm font-bold px-2 py-0.5 rounded-full shrink-0">
+          4 / 30 uds
+        </span>
+</div>
+<!-- Barra de nivel de stock -->
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 13.3%;"></div>
+</div>
+<div class="flex items-center justify-between pt-0.5">
+<span class="font-body-sm text-error font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">timer</span> Quiebre estimado: 40 min
+        </span>
+<button class="btn-reponer flex items-center gap-1 px-3 py-1 bg-secondary-container hover:bg-secondary-fixed text-on-secondary-fixed font-headline-sm text-xs font-bold rounded-lg active:scale-95 transition-transform" data-sku="SKU-88210" type="button">
+<span class="material-symbols-outlined text-[15px]">inventory</span>
+          Reponer
+        </button>
+</div>
+</div>
+<!-- Card 2: Aceite Vegetal Del Sol 900ml -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col gap-2">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<img class="w-12 h-12 rounded-lg object-cover bg-surface-container shrink-0" data-alt="Botella de aceite vegetal Del Sol de 900ml empaque transparente con etiqueta amarilla y azul sobre fondo blanco estudio de producto retail de alta resolución" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkKCbSMti8vm7l7CY6P0F4FNY9A4uor-hgriKvsUHfEHXfasg73GH31FSECqCSvSJqKJsdPEJsDQAHJ02xzgHBUFwYeUdFzH7KnyHQiQdEY5h3iUVdlbOJMVkW8PpQTsleaauhyCZsvNNeXm-QsZn2T8hyZ8m6BDI3ghzNSqigjESvYQDCvTRGiQoQoVPy8qGERBg5SU0kp5e3sGGtJnX0CQc3g8ZG15xTtE6Up6yRmU7jxWP-LpOaIg"/>
+<div class="min-w-0">
+<h3 class="font-headline-sm text-primary text-[14px] leading-tight truncate">Aceite Vegetal Del Sol 900ml</h3>
+<span class="font-data-mono text-on-surface-variant text-[11px] block">SKU-74912 • Pasillo 02B</span>
+</div>
+</div>
+<span class="bg-[#FEE2E2] text-[#991B1B] font-label-sm font-bold px-2 py-0.5 rounded-full shrink-0">
+          6 / 50 uds
+        </span>
+</div>
+<!-- Barra de nivel de stock -->
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 12%;"></div>
+</div>
+<div class="flex items-center justify-between pt-0.5">
+<span class="font-body-sm text-error font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">timer</span> Quiebre estimado: 1h 15m
+        </span>
+<button class="btn-reponer flex items-center gap-1 px-3 py-1 bg-secondary-container hover:bg-secondary-fixed text-on-secondary-fixed font-headline-sm text-xs font-bold rounded-lg active:scale-95 transition-transform" data-sku="SKU-74912" type="button">
+<span class="material-symbols-outlined text-[15px]">inventory</span>
+          Reponer
+        </button>
+</div>
+</div>
+<!-- Card 3: Detergente Floral Mass 4.5kg -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col gap-2">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<img class="w-12 h-12 rounded-lg object-cover bg-surface-container shrink-0" data-alt="Bolsa grande de detergente floral marca Mass 4.5 kilogramos empaque azul brillante y detalles dorados en tienda minorista retail con luz nítida" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzSABmybn0XIoN3XQ3v7tcGAcH743DCSrl_5rJzZD4pYqD6Eu5jyFZnKAPjvBR7uIHk2jX1Nx07T19qX6AvqsK8KXiyGRG4B-Me2miz26j4zDo7_5a41v3BAc4sHqKJbAchJr2s4e7tG-ChocGVOCAf8wba7IuRPmOoCbJsOSiPeCElo5osfPP1k113I_Mo4amFRlkcEgtXKF7Bj9ALiwRU219fGzgp375DZ6jvGetc5usPXVTK7Jezg"/>
+<div class="min-w-0">
+<h3 class="font-headline-sm text-primary text-[14px] leading-tight truncate">Detergente Floral Mass 4.5kg</h3>
+<span class="font-data-mono text-on-surface-variant text-[11px] block">SKU-31904 • Pasillo 05C</span>
+</div>
+</div>
+<span class="bg-[#FEF3C7] text-[#B45309] font-label-sm font-bold px-2 py-0.5 rounded-full shrink-0">
+          8 / 40 uds
+        </span>
+</div>
+<!-- Barra de nivel de stock -->
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-[#EAB308] h-full rounded-full" style="width: 20%;"></div>
+</div>
+<div class="flex items-center justify-between pt-0.5">
+<span class="font-body-sm text-[#B45309] font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> Reposición programada
+        </span>
+<button class="btn-reponer flex items-center gap-1 px-3 py-1 bg-secondary-container hover:bg-secondary-fixed text-on-secondary-fixed font-headline-sm text-xs font-bold rounded-lg active:scale-95 transition-transform" data-sku="SKU-31904" type="button">
+<span class="material-symbols-outlined text-[15px]">inventory</span>
+          Reponer
+        </button>
+</div>
+</div>
+</div>
+<!-- Pedidos Recientes en Tienda -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-on-surface">Pedidos Recientes en Tienda</h2>
+<a class="font-label-md text-primary font-semibold hover:underline flex items-center" href="#">
+        Ver todos
+        <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- Pedido 1: #PED-9482 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-full bg-[#DCFCE7] text-[#15803D] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-on-surface text-[14px]">#PED-9482</span>
+<span class="font-label-sm text-on-surface-variant font-medium">Caja 02</span>
+</div>
+<span class="font-body-sm text-on-surface-variant truncate block">12 ítems • Turno Mañana</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<div class="font-headline-sm text-primary text-[15px]">S/ 142.80</div>
+<span class="inline-flex items-center gap-1 bg-[#DCFCE7] text-[#15803D] font-label-sm font-semibold px-2 py-0.2 rounded-full uppercase">
+          Entregado
+        </span>
+</div>
+</div>
+<!-- Pedido 2: #PED-9481 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-full bg-[#FEF3C7] text-[#B45309] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">hourglass_top</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-on-surface text-[14px]">#PED-9481</span>
+<span class="bg-secondary-container/60 text-on-secondary-fixed font-label-sm font-bold px-1.5 py-0.2 rounded">App Mass Ya!</span>
+</div>
+<span class="font-body-sm text-on-surface-variant truncate block">5 ítems • Repartidor asignado</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<div class="font-headline-sm text-primary text-[15px]">S/ 89.50</div>
+<span class="inline-flex items-center gap-1 bg-[#FEF3C7] text-[#B45309] font-label-sm font-semibold px-2 py-0.2 rounded-full uppercase">
+          En Picking
+        </span>
+</div>
+</div>
+</div>
+<!-- Toast de Notificación Táctil para Reposición -->
+<div class="fixed bottom-20 left-4 right-4 bg-primary text-on-primary p-3 rounded-xl shadow-xl flex items-center justify-between gap-2 transform translate-y-32 opacity-0 transition-all duration-300 pointer-events-none z-50" id="toast-replenish">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container">task_alt</span>
+<span class="font-label-md" id="toast-text">Solicitud enviada a bodega</span>
+</div>
+<span class="font-label-sm text-secondary-container uppercase font-bold tracking-wider">Listo</span>
+</div>
+</div>
+<script>
+  (function() {
+    // Interacción simple de pestañas de rango
+    const tabs = document.querySelectorAll('#time-range-tabs .tab-btn');
+    tabs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabs.forEach(b => {
+          b.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+          b.classList.add('text-on-surface-variant');
+        });
+        btn.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+        btn.classList.remove('text-on-surface-variant');
+      });
+    });
+
+    // Micro-interacción Botones "Reponer"
+    const replenishButtons = document.querySelectorAll('.btn-reponer');
+    const toast = document.getElementById('toast-replenish');
+    const toastText = document.getElementById('toast-text');
+
+    replenishButtons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const sku = this.getAttribute('data-sku') || 'SKU';
+        this.innerHTML = '<span class="material-symbols-outlined text-[15px] animate-spin">sync</span> Pedido';
+        this.classList.replace('bg-secondary-container', 'bg-surface-container-high');
+        
+        if (toast && toastText) {
+          toastText.textContent = `Orden de reposición creada para ${sku}`;
+          toast.classList.remove('translate-y-32', 'opacity-0', 'pointer-events-none');
+          setTimeout(() => {
+            toast.classList.add('translate-y-32', 'opacity-0', 'pointer-events-none');
+          }, 2400);
+        }
+      });
+    });
+
+    // Botón de reporte rápido
+    const exportBtn = document.getElementById('btn-export-report');
+    if (exportBtn) {
+      exportBtn.addEventListener('click', () => {
+        exportBtn.classList.add('scale-90');
+        setTimeout(() => exportBtn.classList.remove('scale-90'), 150);
+        if (toast && toastText) {
+          toastText.textContent = 'Generando Excel Operativo Tienda #412...';
+          toast.classList.remove('translate-y-32', 'opacity-0', 'pointer-events-none');
+          setTimeout(() => {
+            toast.classList.add('translate-y-32', 'opacity-0', 'pointer-events-none');
+          }, 2000);
+        }
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(11,28,48,0.06)]" data-active-classes="text-primary font-semibold [&amp;_span.material-symbols-outlined]:font-variation-fill"><div class="flex justify-around items-center h-16 px-gutter-compact"><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] transition-colors active:scale-95 text-primary font-semibold [&amp;_span.material-symbols-outlined]:font-variation-fill" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm tracking-tight">Inicio</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-primary transition-colors active:scale-95" data-path="catalogo" href="#"><span class="material-symbols-outlined text-[22px]">inventory_2</span><span class="font-label-sm tracking-tight">Catálogo</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-primary transition-colors active:scale-95" data-path="inventario" href="#"><span class="material-symbols-outlined text-[22px]">warehouse</span><span class="font-label-sm tracking-tight">Kardex</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-primary transition-colors active:scale-95" data-path="pedidos" href="#"><span class="material-symbols-outlined text-[22px]">local_shipping</span><span class="font-label-sm tracking-tight">Pedidos</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-primary transition-colors active:scale-95" data-path="operaciones-menu" href="#"><span class="material-symbols-outlined text-[22px]">menu_open</span><span class="font-label-sm tracking-tight">Más</span></a></div></nav></body></html>
+

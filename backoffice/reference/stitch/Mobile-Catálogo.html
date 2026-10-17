@@ -1,0 +1,395 @@
+
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>Tiendas Mass - Backoffice</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 500,'GRAD' 0,'opsz' 24;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-container": "#0a3a82", "on-secondary-fixed": "#241a00", "on-tertiary-container": "#87a4ff", "error-container": "#ffdad6", "on-primary": "#ffffff", "on-tertiary": "#ffffff", "on-primary-container": "#84a7f6", "surface-variant": "#d3e4fe", "tertiary-fixed-dim": "#b4c5ff", "inverse-primary": "#afc6ff", "background": "#f8f9ff", "on-error": "#ffffff", "error": "#ba1a1a", "surface-container-low": "#eff4ff", "primary-fixed-dim": "#afc6ff", "on-secondary-container": "#6e5700", "secondary-fixed-dim": "#f1c100", "outline": "#747782", "surface-container-high": "#dce9ff", "surface-container-lowest": "#ffffff", "primary": "#00255b", "surface": "#f8f9ff", "inverse-on-surface": "#eaf1ff", "surface-container": "#e5eeff", "surface-tint": "#375ca5", "outline-variant": "#c4c6d2", "secondary-container": "#fecb00", "tertiary": "#002264", "tertiary-fixed": "#dbe1ff", "on-primary-fixed-variant": "#1a448c", "surface-container-highest": "#d3e4fe", "on-secondary-fixed-variant": "#584400", "tertiary-container": "#003593", "on-tertiary-fixed-variant": "#003ea8", "surface-dim": "#cbdbf5", "secondary": "#745b00", "on-background": "#0b1c30", "on-tertiary-fixed": "#00174b", "on-surface-variant": "#434751", "on-secondary": "#ffffff", "on-primary-fixed": "#001944", "on-surface": "#0b1c30", "secondary-fixed": "#ffe08b", "inverse-surface": "#213145", "primary-fixed": "#d9e2ff", "on-error-container": "#93000a", "surface-bright": "#f8f9ff" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter-compact": "0.5rem", "space-md": "0.75rem", "space-xs": "0.25rem", "margin-mobile": "1rem", "space-sm": "0.5rem", "space-xl": "2rem", "margin": "1.5rem", "gutter": "1rem", "space-lg": "1.25rem" }, "fontFamily": { "headline-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-md": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "data-mono": ["Inter"], "body-lg": ["Inter"], "price-mass": ["Plus Jakarta Sans"], "label-sm": ["Inter"], "display-lg": ["Plus Jakarta Sans"], "price-regular": ["Inter"], "body-sm": ["Inter"], "label-md": ["Inter"] }, "fontSize": { "headline-md": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "headline-sm": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600"}], "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400"}], "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700"}], "data-mono": ["13px", {"lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500"}], "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}], "price-mass": ["16px", {"lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600"}], "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "price-regular": ["12px", {"lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400"}], "body-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400"}], "label-md": ["13px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500"}] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background font-body-md text-on-surface antialiased flex flex-col min-h-screen selection:bg-secondary-container selection:text-on-secondary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><div class="flex items-center justify-center bg-secondary-container px-2 py-1 rounded-lg shrink-0"><span class="font-headline-lg text-primary-container font-extrabold tracking-tighter lowercase leading-none">mass</span></div><button class="flex items-center gap-1 min-h-[44px] px-2 py-1 bg-surface-container-lowest/80 rounded-xl hover:bg-surface-container-high transition-colors min-w-0 text-left" type="button"><div class="flex flex-col min-w-0"><span class="font-label-sm text-on-surface-variant uppercase tracking-wider truncate">Local Activo</span><div class="flex items-center gap-1 min-w-0"><span class="font-headline-sm text-primary font-bold truncate">#412 Próceres</span><span class="material-symbols-outlined text-[16px] text-primary shrink-0">expand_more</span></div></div></button></div><div class="flex items-center gap-1 shrink-0"><button aria-label="Notificaciones" class="relative w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors rounded-full" type="button"><span class="material-symbols-outlined text-[24px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-1 pl-1"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-28 px-margin-mobile bg-background min-h-screen"><div class="flex flex-col w-full gap-space-md">
+<!-- Search & Barcode Quick Access -->
+<div class="flex items-center gap-space-xs bg-surface-container-lowest p-1.5 rounded-full shadow-sm">
+<div class="flex items-center justify-center pl-2.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full bg-transparent text-body-md font-body-md text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none min-w-0 py-1" placeholder="Buscar por nombre, SKU o EAN..." type="text" value="Mass"/>
+<button aria-label="Escanear código de barras" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-primary active:scale-95 transition-transform shrink-0" type="button">
+<span class="material-symbols-outlined text-[20px]">barcode_scanner</span>
+</button>
+</div>
+<!-- Horizontal Filter Chips (Scroll-X) -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar -mx-margin-mobile px-margin-mobile py-0.5">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant whitespace-nowrap active:scale-95 transition-all shadow-sm shrink-0" type="button">
+<span class="font-label-md text-label-md">Todas las categorías</span>
+<span class="material-symbols-outlined text-[16px]">arrow_drop_down</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary whitespace-nowrap active:scale-95 transition-all shadow-sm shrink-0" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-semibold">Marca Mass Propia</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant whitespace-nowrap active:scale-95 transition-all shadow-sm shrink-0" type="button">
+<span class="material-symbols-outlined text-[16px]">shelves</span>
+<span class="font-label-md text-label-md">En Góndola</span>
+</button>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed whitespace-nowrap active:scale-95 transition-all shadow-sm shrink-0 font-semibold" type="button">
+<span class="material-symbols-outlined text-[16px]">percent</span>
+<span class="font-label-md text-label-md">Ahorro &gt;20%</span>
+</button>
+</div>
+<!-- Action Bar & Quick Operations -->
+<div class="flex items-center justify-between gap-space-sm pt-0.5">
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-1.5 px-3.5 py-2 bg-primary-container text-on-primary rounded-xl shadow-sm active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span class="font-label-md text-label-md font-semibold">+ Nuevo SKU</span>
+</button>
+<button aria-label="Importar o exportar catálogo" class="w-10 h-10 rounded-xl bg-surface-container-lowest text-primary flex items-center justify-center shadow-sm active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[20px]">swap_vert</span>
+</button>
+</div>
+<!-- Mass Brand Toggle Pill -->
+<label class="flex items-center gap-2 bg-surface-container-lowest px-2.5 py-1.5 rounded-xl shadow-sm cursor-pointer select-none">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Solo Mass</span>
+<div class="relative inline-flex items-center">
+<input checked="" class="sr-only peer" id="mass-toggle" type="checkbox"/>
+<div class="w-8 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:left-[1px] after:bg-on-primary after:rounded-full after:h-3.5 after:w-3.5 after:transition-all peer-checked:bg-primary-container"></div>
+</div>
+</label>
+</div>
+<!-- Count Summary & Sort -->
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">3,842</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">productos activos</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span>Ordenar:</span>
+<span class="text-primary font-semibold">Mayor Stock</span>
+<span class="material-symbols-outlined text-[14px]">unfold_more</span>
+</div>
+</div>
+<!-- Product List (Cards Stack) -->
+<div class="flex flex-col gap-space-sm" id="product-list">
+<!-- Card 1: Arroz Mass 5kg -->
+<div class="product-card group relative flex flex-col bg-surface-container-lowest rounded-xl p-3 shadow-sm transition-all active:scale-[0.99]" data-sku="EAN-775089201">
+<div class="flex items-start gap-3">
+<!-- Thumbnail + Selection Checkbox -->
+<div class="relative shrink-0">
+<img class="w-18 h-20 w-[74px] h-[82px] object-cover rounded-lg bg-surface-container-low" data-alt="Pack of high quality Peruvian white extra rice branded Mass inside commercial plastic bag packaging 5kg on clean studio table neutral commercial lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ69Eo7Cmq2IMtXtAENQpoe-rai-tmSP4hEu_RyaFvmWomUgpSkc9y2iOe6fXY418yONB1Ttc56-yOi_N15uM5OOr0Qz8lWQEHCiAbOjvy83aBaftQY120mLCr8LPXkuvOeDBe0F568qgJJ1HjQaF-BtQ3n_nXfmi9GFw8G78WqnVYSZ_dQwvsLQUFcYCKPvhSuzxfMi7Vn-r6OKdz4jf1KKp8JuT_0VxlnyMeI2yRHdQzbTG1qmVOug"/>
+<button aria-label="Seleccionar producto" class="item-checkbox absolute -top-1.5 -left-1.5 w-6 h-6 rounded-md bg-surface-container-lowest shadow-md flex items-center justify-center text-primary-container border-0" onclick="toggleItemSelection(this)" type="button">
+<span class="material-symbols-outlined text-[18px] select-icon">check_box_outline_blank</span>
+</button>
+<span class="absolute bottom-1 left-1 bg-secondary-container text-on-secondary-container px-1 py-0.2 rounded font-label-sm text-[9px] font-bold leading-tight uppercase">MASS</span>
+</div>
+<!-- Product Meta & Actions -->
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-start justify-between gap-1">
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide truncate block">Abarrotes • Granos</span>
+<h2 class="font-headline-sm text-headline-sm text-on-background font-bold truncate leading-tight">Arroz Extra Añejo Mass 5kg</h2>
+</div>
+<button aria-label="Más opciones" class="p-1 -mr-1 text-on-surface-variant hover:text-primary rounded-lg shrink-0" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-data-mono text-body-sm text-on-surface-variant bg-surface-container-low px-1.5 py-0.5 rounded">EAN 775089201</span>
+<div class="flex items-center gap-1 bg-surface-container-low px-2 py-0.5 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">420 uds</span>
+</div>
+<span class="bg-surface-variant text-on-primary-fixed-variant font-label-sm text-label-sm px-1.5 py-0.5 rounded font-bold uppercase text-[10px]">Óptimo</span>
+</div>
+<!-- Price Row & Fleje Mass -->
+<div class="flex items-end justify-between mt-2 pt-1 border-t-0">
+<div class="flex flex-col">
+<span class="font-price-regular text-price-regular text-on-surface-variant line-through leading-none">Reg: S/ 21.50</span>
+<span class="font-label-sm text-label-sm text-primary font-bold mt-0.5">Ahorro S/ 2.60 (-12%)</span>
+</div>
+<!-- Fleje Amarillo Mass Tag -->
+<div class="flex items-center bg-secondary-container px-2.5 py-1 rounded-lg shadow-sm">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-[9px] uppercase tracking-wider text-on-secondary-container font-extrabold leading-none">PRECIO MASS</span>
+<span class="font-headline-md text-headline-md text-on-secondary-container font-black leading-tight">S/ 18.90</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2: Aceite Vegetal Mass 900ml (Critically Low Stock) -->
+<div class="product-card group relative flex flex-col bg-surface-container-lowest rounded-xl p-3 shadow-sm transition-all active:scale-[0.99]" data-sku="MASS-ABR-014">
+<div class="flex items-start gap-3">
+<div class="relative shrink-0">
+<img class="w-[74px] h-[82px] object-cover rounded-lg bg-surface-container-low" data-alt="Plastic clear bottle of cooking oil labeled Mass Vegetable Soya Oil 900ml clean retail commercial package pack shot isolated soft yellow tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvYF3Z8qyix_HGQgWhwf7cMWenFcz9ZYqvwFBgIH_cgyjjbiz74Fwuu6I-MCkvCWQrgHqoVMm6Y1TqQVJGWk9zjolGUKOatAJo2PLI8cZQXMXJAGpOM0rZYcq9riaekpicn0R53vrWdRWTQ2TGeqbO8d18uh9key6i7ondh-fNu5eskgqXRVFOnRLw9z5TGS7614JjUjoLKcSNVG8v6v-fAIOuyk_SUwJN3TF0pBGxvDqwj-nH27Gxbw"/>
+<button aria-label="Seleccionar producto" class="item-checkbox absolute -top-1.5 -left-1.5 w-6 h-6 rounded-md bg-surface-container-lowest shadow-md flex items-center justify-center text-primary-container" onclick="toggleItemSelection(this)" type="button">
+<span class="material-symbols-outlined text-[18px] select-icon">check_box_outline_blank</span>
+</button>
+<span class="absolute bottom-1 left-1 bg-secondary-container text-on-secondary-container px-1 py-0.2 rounded font-label-sm text-[9px] font-bold leading-tight uppercase">MASS</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-start justify-between gap-1">
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide truncate block">Abarrotes • Aceites</span>
+<h2 class="font-headline-sm text-headline-sm text-on-background font-bold truncate leading-tight">Aceite Vegetal 100% Soya Mass 900ml</h2>
+</div>
+<button aria-label="Editar producto" class="p-1 -mr-1 text-on-surface-variant hover:text-primary rounded-lg shrink-0" type="button">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-data-mono text-body-sm text-on-surface-variant bg-surface-container-low px-1.5 py-0.5 rounded">MASS-ABR-014</span>
+<div class="flex items-center gap-1 bg-error-container/40 px-2 py-0.5 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+<span class="font-label-sm text-label-sm text-on-error-container font-bold">8 uds</span>
+</div>
+<span class="bg-error-container text-on-error-container font-label-sm text-label-sm px-1.5 py-0.5 rounded font-bold uppercase text-[10px]">Alerta Crítica</span>
+</div>
+<!-- Price Row -->
+<div class="flex items-end justify-between mt-2 pt-1">
+<div class="flex flex-col">
+<span class="font-price-regular text-price-regular text-on-surface-variant line-through leading-none">Reg: S/ 7.80</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold mt-0.5">Margen 16.6%</span>
+</div>
+<!-- Fleje Amarillo Mass Tag -->
+<div class="flex items-center bg-secondary-container px-2.5 py-1 rounded-lg shadow-sm">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-[9px] uppercase tracking-wider text-on-secondary-container font-extrabold leading-none">PRECIO MASS</span>
+<span class="font-headline-md text-headline-md text-on-secondary-container font-black leading-tight">S/ 6.50</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3: Leche Evaporada Entera Mass 400g -->
+<div class="product-card group relative flex flex-col bg-surface-container-lowest rounded-xl p-3 shadow-sm transition-all active:scale-[0.99]" data-sku="MASS-LAC-008">
+<div class="flex items-start gap-3">
+<div class="relative shrink-0">
+<img class="w-[74px] h-[82px] object-cover rounded-lg bg-surface-container-low" data-alt="Tin can packaging of evaporated milk with Mass blue and yellow branding 400g product photography commercial white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGQjfEcidrTNEv2-Imev89XEaZUUIuWv6x8ng-1SrEZwIN8wjgX7Y6zz-HvkGItS4T4pA5rBB0O4iXuwSL860sZXJ8dnM6gOKsHRnr7-BEW0BXVPd1BHK8kJQtAM1YzWVXPIhJhaNGwPEoRg9E8YCcS_pIszoVgvt_mjQuw4oqYMAcQKL1x9Wa9rl_cScO-qIew5BGbxMPY-tn_T6N-sYH69oUVq3g0a7Ix1hUaKiUCPjsQoKdoFubQw"/>
+<button aria-label="Seleccionar producto" class="item-checkbox absolute -top-1.5 -left-1.5 w-6 h-6 rounded-md bg-surface-container-lowest shadow-md flex items-center justify-center text-primary-container" onclick="toggleItemSelection(this)" type="button">
+<span class="material-symbols-outlined text-[18px] select-icon">check_box_outline_blank</span>
+</button>
+<span class="absolute bottom-1 left-1 bg-secondary-container text-on-secondary-container px-1 py-0.2 rounded font-label-sm text-[9px] font-bold leading-tight uppercase">MASS</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-start justify-between gap-1">
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide truncate block">Lácteos &amp; Huevos</span>
+<h2 class="font-headline-sm text-headline-sm text-on-background font-bold truncate leading-tight">Leche Evaporada Entera Mass 400g</h2>
+</div>
+<button aria-label="Más opciones" class="p-1 -mr-1 text-on-surface-variant hover:text-primary rounded-lg shrink-0" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-data-mono text-body-sm text-on-surface-variant bg-surface-container-low px-1.5 py-0.5 rounded">MASS-LAC-008</span>
+<div class="flex items-center gap-1 bg-surface-container-low px-2 py-0.5 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">650 uds</span>
+</div>
+<span class="bg-surface-variant text-on-primary-fixed-variant font-label-sm text-label-sm px-1.5 py-0.5 rounded font-bold uppercase text-[10px]">Alta rotación</span>
+</div>
+<div class="flex items-end justify-between mt-2 pt-1">
+<div class="flex flex-col">
+<span class="font-price-regular text-price-regular text-on-surface-variant line-through leading-none">Reg: S/ 4.20</span>
+<span class="font-label-sm text-label-sm text-primary font-bold mt-0.5">-14% vs Líder</span>
+</div>
+<div class="flex items-center bg-secondary-container px-2.5 py-1 rounded-lg shadow-sm">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-[9px] uppercase tracking-wider text-on-secondary-container font-extrabold leading-none">PRECIO MASS</span>
+<span class="font-headline-md text-headline-md text-on-secondary-container font-black leading-tight">S/ 3.60</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4: Detergente Multiuso Floral Mass 4.5kg -->
+<div class="product-card group relative flex flex-col bg-surface-container-lowest rounded-xl p-3 shadow-sm transition-all active:scale-[0.99]" data-sku="MASS-LIM-022">
+<div class="flex items-start gap-3">
+<div class="relative shrink-0">
+<img class="w-[74px] h-[82px] object-cover rounded-lg bg-surface-container-low" data-alt="Detergent laundry powder bag 4.5kg with blue and floral graphics labeled Mass Multiuso front angle studio photography for retail store" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAss5Nb4k4QViCbfsWg-C3YBaA8gHpyxF3DJNsH7CgxWTFEybsqjJ_4Y7fxjbYBOus5Kjpzqyql_PbJyaXqdZedof7sLc0LggkPaVEN-aiRxlGUPsL-D5g0j9TC2utkvuRLqHsGTZYE8q0CH_2LBPKsKZa-H_yuQBicPOdqAaqVomw9SnAzZTz5ApS2bimulR-fxfJxhHnR1guU4UM76SGTgvmR8cnbR2zkfvRiQHFIzLyzs6UtFMGFWw"/>
+<button aria-label="Seleccionar producto" class="item-checkbox absolute -top-1.5 -left-1.5 w-6 h-6 rounded-md bg-surface-container-lowest shadow-md flex items-center justify-center text-primary-container" onclick="toggleItemSelection(this)" type="button">
+<span class="material-symbols-outlined text-[18px] select-icon">check_box_outline_blank</span>
+</button>
+<span class="absolute bottom-1 left-1 bg-secondary-container text-on-secondary-container px-1 py-0.2 rounded font-label-sm text-[9px] font-bold leading-tight uppercase">MASS</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-start justify-between gap-1">
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide truncate block">Limpieza &amp; Hogar</span>
+<h2 class="font-headline-sm text-headline-sm text-on-background font-bold truncate leading-tight">Detergente Floral Mass 4.5kg</h2>
+</div>
+<button aria-label="Más opciones" class="p-1 -mr-1 text-on-surface-variant hover:text-primary rounded-lg shrink-0" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-data-mono text-body-sm text-on-surface-variant bg-surface-container-low px-1.5 py-0.5 rounded">MASS-LIM-022</span>
+<div class="flex items-center gap-1 bg-surface-container-low px-2 py-0.5 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">110 uds</span>
+</div>
+<span class="bg-surface-variant text-on-primary-fixed-variant font-label-sm text-label-sm px-1.5 py-0.5 rounded font-bold uppercase text-[10px]">Góndola B</span>
+</div>
+<div class="flex items-end justify-between mt-2 pt-1">
+<div class="flex flex-col">
+<span class="font-price-regular text-price-regular text-on-surface-variant line-through leading-none">Reg: S/ 28.90</span>
+<span class="font-label-sm text-label-sm text-primary font-bold mt-0.5">Súper Ahorro S/ 5.00</span>
+</div>
+<div class="flex items-center bg-secondary-container px-2.5 py-1 rounded-lg shadow-sm">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-[9px] uppercase tracking-wider text-on-secondary-container font-extrabold leading-none">PRECIO MASS</span>
+<span class="font-headline-md text-headline-md text-on-secondary-container font-black leading-tight">S/ 23.90</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 5: Fideos Spaghetti Mass 450g -->
+<div class="product-card group relative flex flex-col bg-surface-container-lowest rounded-xl p-3 shadow-sm transition-all active:scale-[0.99]" data-sku="MASS-ABR-041">
+<div class="flex items-start gap-3">
+<div class="relative shrink-0">
+<img class="w-[74px] h-[82px] object-cover rounded-lg bg-surface-container-low" data-alt="Spaghetti pasta plastic package 450g labeled Mass brand transparent window showing golden pasta commercial grocery catalog photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiUCPnG85D0SueyK9xx60c0A5ivhrkJLTVDou7aWP-ek-X4JHPMH1WNkeDCpB4J4v9fQUnQxJraY_O7FhAgU-MMjg1HJxMnbfQFTmJbzKTSxlVGGbI5MItEjgrtTRfcnVC_N7WhnAJQuNIaGyB8BVKhPZm5wexA9e2kNvz_8Gj6yMa9qn2kZ4pv-WsudrpwNLsVX-rYjt4z4dr8p-H5ZLPrzRvSF9jdLfO6sodbwNd4BvGzkKM51jdRw"/>
+<button aria-label="Seleccionar producto" class="item-checkbox absolute -top-1.5 -left-1.5 w-6 h-6 rounded-md bg-surface-container-lowest shadow-md flex items-center justify-center text-primary-container" onclick="toggleItemSelection(this)" type="button">
+<span class="material-symbols-outlined text-[18px] select-icon">check_box_outline_blank</span>
+</button>
+<span class="absolute bottom-1 left-1 bg-secondary-container text-on-secondary-container px-1 py-0.2 rounded font-label-sm text-[9px] font-bold leading-tight uppercase">MASS</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-start justify-between gap-1">
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide truncate block">Pastas &amp; Fideos</span>
+<h2 class="font-headline-sm text-headline-sm text-on-background font-bold truncate leading-tight">Fideos Spaghetti Mass 450g</h2>
+</div>
+<button aria-label="Editar producto" class="p-1 -mr-1 text-on-surface-variant hover:text-primary rounded-lg shrink-0" type="button">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-data-mono text-body-sm text-on-surface-variant bg-surface-container-low px-1.5 py-0.5 rounded">MASS-ABR-041</span>
+<div class="flex items-center gap-1 bg-surface-container-low px-2 py-0.5 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">890 uds</span>
+</div>
+<span class="bg-surface-variant text-on-primary-fixed-variant font-label-sm text-label-sm px-1.5 py-0.5 rounded font-bold uppercase text-[10px]">Punto de Entrada</span>
+</div>
+<div class="flex items-end justify-between mt-2 pt-1">
+<div class="flex flex-col">
+<span class="font-price-regular text-price-regular text-on-surface-variant line-through leading-none">Reg: S/ 2.60</span>
+<span class="font-label-sm text-label-sm text-primary font-bold mt-0.5">-23% Precio Rompe</span>
+</div>
+<div class="flex items-center bg-secondary-container px-2.5 py-1 rounded-lg shadow-sm">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-[9px] uppercase tracking-wider text-on-secondary-container font-extrabold leading-none">PRECIO MASS</span>
+<span class="font-headline-md text-headline-md text-on-secondary-container font-black leading-tight">S/ 1.99</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Mobile Touch Pagination (Large tactile click zones) -->
+<div class="flex items-center justify-between bg-surface-container-lowest p-2 rounded-xl shadow-sm mt-1">
+<button aria-label="Página anterior" class="flex items-center justify-center w-12 h-11 rounded-lg bg-surface-container text-on-surface-variant/40 disabled:opacity-50 active:scale-90 transition-transform" disabled="" type="button">
+<span class="material-symbols-outlined text-[24px]">chevron_left</span>
+</button>
+<div class="flex flex-col items-center">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">Página 1 de 385</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">5 de 3,842 artículos</span>
+</div>
+<button aria-label="Página siguiente" class="flex items-center justify-center w-12 h-11 rounded-lg bg-primary-container text-on-primary active:scale-90 transition-transform shadow-sm" type="button">
+<span class="material-symbols-outlined text-[24px]">chevron_right</span>
+</button>
+</div>
+<!-- Floating Multi-Selection Action Bar (Sticky above bottom nav) -->
+<div class="fixed bottom-20 left-4 right-4 z-40 bg-inverse-surface text-inverse-on-surface p-3 rounded-2xl shadow-2xl flex items-center justify-between gap-2 transform transition-all duration-300 translate-y-32 opacity-0 pointer-events-none" id="floating-actions">
+<div class="flex items-center gap-2 pl-1 min-w-0">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="font-label-sm text-label-sm font-black" id="selected-counter">0</span>
+</div>
+<span class="font-label-md text-label-md truncate">Seleccionados</span>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<button class="flex items-center gap-1 px-3 py-2 bg-secondary-container text-on-secondary-container rounded-xl font-label-md text-label-md font-bold shadow-md active:scale-95 transition-transform" onclick="triggerLabelPrint()" type="button">
+<span class="material-symbols-outlined text-[16px]">print</span>
+<span>Imprimir Fleje</span>
+</button>
+<button aria-label="Actualizar lote" class="w-9 h-9 rounded-xl bg-inverse-surface flex items-center justify-center text-inverse-on-surface active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[20px]">sync</span>
+</button>
+<button aria-label="Deseleccionar todos" class="w-9 h-9 rounded-xl bg-inverse-surface/80 flex items-center justify-center text-inverse-on-surface active:scale-95" onclick="clearSelection()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  let selectedCount = 0;
+
+  function toggleItemSelection(button) {
+    const card = button.closest('.product-card');
+    const icon = button.querySelector('.select-icon');
+    const isSelected = card.classList.toggle('selected-item');
+
+    if (isSelected) {
+      card.classList.add('bg-surface-container-high');
+      card.classList.remove('bg-surface-container-lowest');
+      icon.textContent = 'check_box';
+      icon.style.fontVariationSettings = "'FILL' 1";
+      button.classList.add('bg-primary-container', 'text-on-primary');
+      button.classList.remove('bg-surface-container-lowest', 'text-primary-container');
+      selectedCount++;
+    } else {
+      card.classList.remove('bg-surface-container-high');
+      card.classList.add('bg-surface-container-lowest');
+      icon.textContent = 'check_box_outline_blank';
+      icon.style.fontVariationSettings = "'FILL' 0";
+      button.classList.remove('bg-primary-container', 'text-on-primary');
+      button.classList.add('bg-surface-container-lowest', 'text-primary-container');
+      selectedCount--;
+    }
+
+    updateFloatingBar();
+  }
+
+  function updateFloatingBar() {
+    const bar = document.getElementById('floating-actions');
+    const counter = document.getElementById('selected-counter');
+    counter.textContent = selectedCount;
+
+    if (selectedCount > 0) {
+      bar.classList.remove('translate-y-32', 'opacity-0', 'pointer-events-none');
+      bar.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
+    } else {
+      bar.classList.add('translate-y-32', 'opacity-0', 'pointer-events-none');
+      bar.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
+    }
+  }
+
+  function clearSelection() {
+    document.querySelectorAll('.product-card.selected-item').forEach(card => {
+      const btn = card.querySelector('.item-checkbox');
+      if (btn) toggleItemSelection(btn);
+    });
+    selectedCount = 0;
+    updateFloatingBar();
+  }
+
+  function triggerLabelPrint() {
+    const bar = document.getElementById('floating-actions');
+    const originalText = bar.innerHTML;
+    // Brief visual confirmation feedback
+    const toast = document.createElement('div');
+    toast.className = 'fixed top-20 left-1/2 -translate-x-1/2 bg-primary-container text-on-primary px-4 py-2 rounded-full shadow-lg font-label-md text-label-md z-50 flex items-center gap-2';
+    toast.innerHTML = '<span class="material-symbols-outlined text-[18px] text-secondary-container">check_circle</span> Flejes enviados a cola de impresión';
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 2500);
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(11,28,48,0.06)]" data-active-classes="text-primary font-semibold [&amp;_span.material-symbols-outlined]:font-variation-fill"><div class="flex justify-around items-center h-16 px-gutter-compact"><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-primary transition-colors active:scale-95" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm tracking-tight">Inicio</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-primary transition-colors active:scale-95" data-path="catalogo" href="#"><span class="material-symbols-outlined text-[22px]">inventory_2</span><span class="font-label-sm tracking-tight">Catálogo</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-primary transition-colors active:scale-95" data-path="inventario" href="#"><span class="material-symbols-outlined text-[22px]">warehouse</span><span class="font-label-sm tracking-tight">Kardex</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-primary transition-colors active:scale-95" data-path="pedidos" href="#"><span class="material-symbols-outlined text-[22px]">local_shipping</span><span class="font-label-sm tracking-tight">Pedidos</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-primary transition-colors active:scale-95" data-path="operaciones-menu" href="#"><span class="material-symbols-outlined text-[22px]">menu_open</span><span class="font-label-sm tracking-tight">Más</span></a></div></nav></body></html>
+

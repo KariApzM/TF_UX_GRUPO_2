@@ -1,0 +1,374 @@
+
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><title>Tiendas Mass - Backoffice</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 500,'GRAD' 0,'opsz' 24;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-container": "#0a3a82", "on-secondary-fixed": "#241a00", "on-tertiary-container": "#87a4ff", "error-container": "#ffdad6", "on-primary": "#ffffff", "on-tertiary": "#ffffff", "on-primary-container": "#84a7f6", "surface-variant": "#d3e4fe", "tertiary-fixed-dim": "#b4c5ff", "inverse-primary": "#afc6ff", "background": "#f8f9ff", "on-error": "#ffffff", "error": "#ba1a1a", "surface-container-low": "#eff4ff", "primary-fixed-dim": "#afc6ff", "on-secondary-container": "#6e5700", "secondary-fixed-dim": "#f1c100", "outline": "#747782", "surface-container-high": "#dce9ff", "surface-container-lowest": "#ffffff", "primary": "#00255b", "surface": "#f8f9ff", "inverse-on-surface": "#eaf1ff", "surface-container": "#e5eeff", "surface-tint": "#375ca5", "outline-variant": "#c4c6d2", "secondary-container": "#fecb00", "tertiary": "#002264", "tertiary-fixed": "#dbe1ff", "on-primary-fixed-variant": "#1a448c", "surface-container-highest": "#d3e4fe", "on-secondary-fixed-variant": "#584400", "tertiary-container": "#003593", "on-tertiary-fixed-variant": "#003ea8", "surface-dim": "#cbdbf5", "secondary": "#745b00", "on-background": "#0b1c30", "on-tertiary-fixed": "#00174b", "on-surface-variant": "#434751", "on-secondary": "#ffffff", "on-primary-fixed": "#001944", "on-surface": "#0b1c30", "secondary-fixed": "#ffe08b", "inverse-surface": "#213145", "primary-fixed": "#d9e2ff", "on-error-container": "#93000a", "surface-bright": "#f8f9ff" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter-compact": "0.5rem", "space-md": "0.75rem", "space-xs": "0.25rem", "margin-mobile": "1rem", "space-sm": "0.5rem", "space-xl": "2rem", "margin": "1.5rem", "gutter": "1rem", "space-lg": "1.25rem" }, "fontFamily": { "headline-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-md": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "data-mono": ["Inter"], "body-lg": ["Inter"], "price-mass": ["Plus Jakarta Sans"], "label-sm": ["Inter"], "display-lg": ["Plus Jakarta Sans"], "price-regular": ["Inter"], "body-sm": ["Inter"], "label-md": ["Inter"] }, "fontSize": { "headline-md": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "headline-sm": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600"}], "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400"}], "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700"}], "data-mono": ["13px", {"lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500"}], "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}], "price-mass": ["16px", {"lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600"}], "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "price-regular": ["12px", {"lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400"}], "body-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400"}], "label-md": ["13px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500"}] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background font-body-md text-on-surface antialiased flex flex-col min-h-screen selection:bg-secondary-container selection:text-on-secondary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-sm flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs min-w-0"><button aria-label="Regresar" class="w-11 h-11 flex items-center justify-center text-primary hover:bg-surface-container-high rounded-full transition-colors shrink-0 active:scale-95" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><div class="flex flex-col min-w-0"><h1 class="font-headline-sm text-primary font-bold truncate leading-tight">Seguimiento</h1><span class="font-label-sm text-on-surface-variant truncate">Local #412 Próceres</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notificaciones" class="relative w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors rounded-full" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe px-margin-mobile bg-background min-h-screen"><div class="flex flex-col w-full pb-24 gap-space-md">
+<!-- Sub-header Operativo & Sincronización GPS -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="font-data-mono text-body-sm font-semibold text-primary truncate">#DSP-2024-8841</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm uppercase tracking-wide">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+          En Tránsito
+        </span>
+</div>
+<button class="shrink-0 inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-secondary-container text-on-secondary-container font-label-md font-bold shadow-sm active:scale-95 transition-transform hover:brightness-95" id="btn-sync-gps" type="button">
+<span class="material-symbols-outlined text-[18px]" id="sync-icon">sync</span>
+<span>Sincronizar GPS</span>
+</button>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">satellite_alt</span> Telemetría satelital activa (Canal 4G)
+      </span>
+<span class="font-data-mono text-[10px]" id="last-sync-time">Actualizado hace 12s</span>
+</div>
+</div>
+<!-- Tarjeta de ETA y Estado Actual (Hero Operativo) -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md relative overflow-hidden">
+<div class="absolute -right-8 -top-8 w-28 h-28 bg-surface-container-high/40 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-on-surface-variant uppercase tracking-wider">Hora Estimada de Llegada (ETA)</span>
+<div class="flex items-baseline gap-2 mt-0.5">
+<span class="font-headline-lg text-primary tracking-tight">14:25 <span class="font-headline-sm font-normal text-on-surface-variant">hrs</span></span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm font-semibold">
+            Faltan 28 min
+          </span>
+</div>
+<p class="font-body-sm text-on-surface-variant mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">traffic</span> Tráfico regular por Vía de Evitamiento
+        </p>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary shadow-xs shrink-0">
+<span class="material-symbols-outlined text-[26px]">local_shipping</span>
+</div>
+</div>
+<!-- Indicadores Clave de Carga -->
+<div class="grid grid-cols-3 gap-space-xs pt-space-xs">
+<div class="bg-surface-container-low rounded-lg p-2.5 flex flex-col justify-between">
+<span class="font-label-sm text-on-surface-variant">SLA Entrega</span>
+<div class="mt-1 flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-green-600"></span>
+<span class="font-data-mono text-body-md font-bold text-on-surface">99.1%</span>
+</div>
+<span class="font-label-sm text-green-700 text-[10px] mt-0.5">En Objetivo</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex flex-col justify-between">
+<span class="font-label-sm text-on-surface-variant">Temp. Furgón</span>
+<div class="mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">thermostat</span>
+<span class="font-data-mono text-body-md font-bold text-on-surface">19.5°C</span>
+</div>
+<span class="font-label-sm text-on-surface-variant text-[10px] mt-0.5">Seco / Normal</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex flex-col justify-between">
+<span class="font-label-sm text-on-surface-variant">Precinto Elec.</span>
+<div class="mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-green-600">lock</span>
+<span class="font-data-mono text-body-md font-bold text-on-surface">#0984</span>
+</div>
+<span class="font-label-sm text-on-surface-variant text-[10px] mt-0.5">Sin aperturas</span>
+</div>
+</div>
+</section>
+<!-- Componente de Mapa de Ruta Móvil con Capa Táctica -->
+<section class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">map</span>
+<span class="font-headline-sm text-primary">Ruta en Vivo: CEDI a Tienda</span>
+</div>
+<span class="font-data-mono text-label-sm text-on-surface-variant">GPS Precisión: ±3m</span>
+</div>
+<!-- Contenedor Mapa con Geometría Visual -->
+<div class="relative w-full h-56 rounded-lg overflow-hidden bg-surface-container-highest shadow-inner">
+<div class="w-full h-full bg-cover bg-center" data-alt="Overhead aerial satellite map perspective of Lima Peru urban highway corridor showing Panamericana Sur connecting to San Juan de Lurigancho district, with route topography, urban streets, industrial grid layout under warm afternoon sunlight" data-location="Lima, Peru, Panamericana Sur Evitamiento San Juan de Lurigancho" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBZh8WJ9FJ3HIrBr6tbheRCo7gLG4wHChYUBF9K39KLhyV1j9AwunNCzItQSdLQKQ2NxHrBmkl_zP0sb7VRUsgeKACp5PRtyiCJY306TYs8C5_Ltz-6AHeHnnHYN0n2cAMwqXIUf4Dr5V0ZgIDNSRBfWQrYYFLUdtiVhGd0re5X-D9hHjGMVHdgEjPcOZAKpDe87H3scXJIlqG_PsvwKBuzqBhMOxhg8O8l0mxtV_75oNG4mCjmobheyA');"></div>
+<!-- Overlay Semitransparente con Trazo Vectorial de la Ruta -->
+<div class="absolute inset-0 bg-primary/10 backdrop-blur-[0.5px] pointer-events-none"></div>
+<!-- Trazo de Ruta SVG en Tiempo Real -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" preserveaspectratio="none" viewbox="0 0 360 224" xmlns="http://www.w3.org/2000/svg">
+<path d="M 40,195 Q 110,180 145,135 T 205,95 T 310,35" fill="none" opacity="0.35" stroke="#00255b" stroke-dasharray="6 4" stroke-linecap="round" stroke-width="4"></path>
+<path d="M 40,195 Q 110,180 145,135" fill="none" stroke="#0a3a82" stroke-linecap="round" stroke-width="5"></path>
+</svg>
+<!-- Pin Origen: CEDI Lurín -->
+<div class="absolute bottom-3 left-4 flex items-center gap-1.5 bg-surface-container-lowest/90 backdrop-blur px-2 py-1 rounded-md shadow-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-primary shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-label-sm font-bold text-primary text-[10px] leading-tight">CEDI Lurín</span>
+<span class="font-data-mono text-[9px] text-on-surface-variant">Km 38.5 Salida</span>
+</div>
+</div>
+<!-- Marcador Camión en Movimiento -->
+<div class="absolute top-[52%] left-[42%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer">
+<div class="relative flex items-center justify-center">
+<span class="absolute w-10 h-10 rounded-full bg-secondary-container/40 animate-ping"></span>
+<div class="w-9 h-9 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[20px]">directions_boat</span>
+</div>
+</div>
+<div class="mt-1 px-2 py-0.5 rounded bg-inverse-surface text-inverse-on-surface text-[10px] font-data-mono shadow-md whitespace-nowrap flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+<span>48 km/h</span>
+<span class="text-surface-variant">•</span>
+<span>Rbo. NNE</span>
+</div>
+</div>
+<!-- Pin Destino: Tienda Mass #412 Próceres -->
+<div class="absolute top-3 right-3 flex items-center gap-1.5 bg-surface-container-lowest/95 backdrop-blur px-2.5 py-1.5 rounded-md shadow-sm">
+<div class="w-6 h-6 rounded bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-[11px] shadow-xs">
+          M
+        </div>
+<div class="flex flex-col">
+<span class="font-label-sm font-bold text-primary text-[11px] leading-tight">Tienda #412</span>
+<span class="font-data-mono text-[9px] text-on-surface-variant">Próceres - SJL</span>
+</div>
+</div>
+</div>
+<!-- Barra de Estado Inferior del Mapa -->
+<div class="flex items-center justify-between px-space-xs text-on-surface-variant font-label-sm pt-1">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">distance</span> Distancia restante: <strong class="text-on-surface font-data-mono">14.2 km</strong>
+</span>
+<span class="font-data-mono text-primary font-semibold">Peaje Evitamiento OK</span>
+</div>
+</section>
+<!-- Timeline de Despacho Operativo Móvil -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-primary">Secuencia de Despacho</span>
+<span class="font-label-sm text-primary font-semibold px-2 py-0.5 rounded bg-surface-container">Paso 5 de 6</span>
+</div>
+<div class="relative flex items-center justify-between pt-2 pb-1 overflow-x-auto">
+<div class="absolute left-4 right-4 top-5 h-1 bg-surface-container -z-0">
+<div class="h-full bg-primary w-[78%]"></div>
+</div>
+<!-- Hito 1: Creado -->
+<div class="flex flex-col items-center text-center z-10 shrink-0">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[15px]">check</span>
+</div>
+<span class="font-label-sm font-medium text-on-surface mt-1.5 text-[10px]">Creado</span>
+<span class="font-data-mono text-on-surface-variant text-[9px]">08:15</span>
+</div>
+<!-- Hito 2: Aprobado -->
+<div class="flex flex-col items-center text-center z-10 shrink-0">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[15px]">check</span>
+</div>
+<span class="font-label-sm font-medium text-on-surface mt-1.5 text-[10px]">Aprob.</span>
+<span class="font-data-mono text-on-surface-variant text-[9px]">09:30</span>
+</div>
+<!-- Hito 3: Picking -->
+<div class="flex flex-col items-center text-center z-10 shrink-0">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[15px]">check</span>
+</div>
+<span class="font-label-sm font-medium text-on-surface mt-1.5 text-[10px]">Picking</span>
+<span class="font-data-mono text-on-surface-variant text-[9px]">11:45</span>
+</div>
+<!-- Hito 4: Despachado -->
+<div class="flex flex-col items-center text-center z-10 shrink-0">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[15px]">check</span>
+</div>
+<span class="font-label-sm font-medium text-on-surface mt-1.5 text-[10px]">Desp.</span>
+<span class="font-data-mono text-on-surface-variant text-[9px]">13:10</span>
+</div>
+<!-- Hito 5: En Ruta (Activo) -->
+<div class="flex flex-col items-center text-center z-10 shrink-0">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-sm ring-4 ring-secondary-fixed/50 animate-pulse">
+<span class="material-symbols-outlined text-[16px]">local_shipping</span>
+</div>
+<span class="font-label-sm font-bold text-primary mt-1.5 text-[10px]">En Ruta</span>
+<span class="font-data-mono text-primary font-bold text-[9px]">Actual</span>
+</div>
+<!-- Hito 6: Recepción -->
+<div class="flex flex-col items-center text-center z-10 shrink-0">
+<div class="w-7 h-7 rounded-full bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[15px]">warehouse</span>
+</div>
+<span class="font-label-sm text-on-surface-variant mt-1.5 text-[10px]">Recep.</span>
+<span class="font-data-mono text-on-surface-variant text-[9px]">14:25</span>
+</div>
+</div>
+</section>
+<!-- Ficha del Transporte y Tripulación -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-primary">Transporte y Tripulación</span>
+<span class="inline-flex items-center gap-1 font-label-sm px-2 py-0.5 rounded bg-surface-container-high text-primary font-semibold">
+<span class="material-symbols-outlined text-[14px]">verified</span> Habilitado
+      </span>
+</div>
+<!-- Perfil del Chofer con Llamada Táctil -->
+<div class="flex items-center justify-between bg-surface-container-low rounded-lg p-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container-high shrink-0 shadow-xs">
+<img class="w-full h-full object-cover" data-alt="Professional headshot of a friendly Peruvian truck fleet driver wearing a navy blue logistics polo shirt with safety credentials badge in a distribution depot warehouse setting, natural warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWPog5rG1YntqAKb_9L8uRFpHg-v6hGUZReRZcRA7RHjBt_GoFauz7IwA7bNzTn9fxNDAmOA86klpXC-lOEg4k2WN4nbkMzxpDRP3yLmChu41AvaUkJ8SQnnHh7-dWQbFaI6YZWzJsBOA7WRWJLOt-nR7I06nX7ClGUKm4qjwRv5bqoFbzQh5y6hL9FZa79AvjvHxtxU7ZBPpU_4g7sIlnd7UOjEyDe-X5pctctoILfG457aqPmL0tJg"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md font-bold text-on-surface truncate">Jorge Valenzuela Rojas</span>
+<span class="font-label-sm text-on-surface-variant">Brevete A-IIIc • 9 años exp.</span>
+<span class="font-data-mono text-[11px] text-primary">ID Operador: #TR-4029</span>
+</div>
+</div>
+<a aria-label="Llamar al transportista" class="shrink-0 w-11 h-11 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-sm hover:bg-primary-container active:scale-95 transition-all" href="tel:987654321">
+<span class="material-symbols-outlined text-[20px]">phone</span>
+</a>
+</div>
+<!-- Especificaciones Técnicas del Vehículo -->
+<div class="grid grid-cols-2 gap-space-xs text-body-sm">
+<div class="bg-surface-container-low rounded-lg p-2.5 flex flex-col">
+<span class="font-label-sm text-on-surface-variant">Unidad &amp; Modelo</span>
+<span class="font-body-md font-semibold text-on-surface mt-0.5">Isuzu Forward 12T</span>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="font-data-mono bg-surface-container-lowest px-1.5 py-0.5 rounded text-label-sm font-bold text-primary">Placa: B8F-912</span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex flex-col">
+<span class="font-label-sm text-on-surface-variant">Capacidad Ocupada</span>
+<div class="flex items-center justify-between mt-0.5">
+<span class="font-body-md font-semibold text-on-surface">85% Lleno</span>
+<span class="font-data-mono text-label-sm text-primary font-bold">185 bultos</span>
+</div>
+<!-- Progress Bar Ocupación -->
+<div class="w-full h-1.5 bg-surface-container-high rounded-full mt-2 overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full" style="width: 85%;"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between px-space-xs pt-1 text-on-surface-variant font-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-green-600">verified_user</span> SOAT Vigente (La Positiva)
+      </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-green-600">task_alt</span> Rev. Técnica al día
+      </span>
+</div>
+</section>
+<!-- Bitácora de Telemetría e Incidentes -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">feed</span>
+<span class="font-headline-sm text-primary">Telemetría &amp; Bitácora</span>
+</div>
+<span class="font-data-mono text-label-sm text-on-surface-variant">Canal Seguro</span>
+</div>
+<!-- Registro de Incidencia Activa -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-start gap-space-xs">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-body-sm font-bold text-on-surface">Congestión en Peaje Separadora</span>
+<span class="font-data-mono text-[10px] text-on-surface-variant shrink-0">14:02 PM</span>
+</div>
+<p class="font-body-sm text-on-surface-variant mt-0.5">
+          Demora de +8 min mitigada por reordenamiento de carril rápido. ETA recalculado mantiene cumplimiento de SLA para descarga en rampa.
+        </p>
+</div>
+</div>
+<!-- Eventos Previos Desplegables -->
+<div class="flex flex-col gap-1.5 pt-1">
+<div class="flex items-center justify-between text-body-sm py-1 px-space-xs border-b border-surface-container-low">
+<span class="flex items-center gap-2 text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          Salida de patio de maniobras CEDI
+        </span>
+<span class="font-data-mono text-label-sm text-on-surface-variant">13:10 PM</span>
+</div>
+<div class="flex items-center justify-between text-body-sm py-1 px-space-xs border-b border-surface-container-low">
+<span class="flex items-center gap-2 text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          Cierre e inducción de precinto digital
+        </span>
+<span class="font-data-mono text-label-sm text-on-surface-variant">12:55 PM</span>
+</div>
+</div>
+</section>
+<!-- Botonera de Acción Operativa Inmediata -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full py-3 px-space-md rounded-xl bg-primary text-on-primary font-headline-sm font-semibold flex items-center justify-center gap-2 shadow-md active:scale-[0.98] transition-transform hover:bg-primary-container" id="btn-notify-store" type="button">
+<span class="material-symbols-outlined text-[20px]">notifications_active</span>
+<span>Notificar a Tienda Arribo Próximo</span>
+</button>
+<button class="w-full py-2.5 px-space-md rounded-xl bg-surface-container-high text-primary font-label-md font-semibold flex items-center justify-center gap-2 active:scale-[0.98] transition-transform hover:bg-surface-variant" id="btn-report-incident" type="button">
+<span class="material-symbols-outlined text-[18px] text-error">report_problem</span>
+<span>Reportar Incidencia en Ruta</span>
+</button>
+</div>
+<!-- Toast Notificador de Interacción -->
+<div class="fixed bottom-6 left-4 right-4 bg-inverse-surface text-inverse-on-surface p-space-sm rounded-xl shadow-xl flex items-center justify-between gap-space-sm transition-all duration-300 transform translate-y-32 opacity-0 pointer-events-none z-50" id="toast-action">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-container text-[20px]" id="toast-icon">check_circle</span>
+<span class="font-body-sm font-medium" id="toast-msg">Acción completada con éxito</span>
+</div>
+<button class="text-inverse-on-surface/80 hover:text-inverse-on-surface" onclick="closeToast()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<script>
+  function showToast(message, icon = 'check_circle') {
+    const toast = document.getElementById('toast-action');
+    const msg = document.getElementById('toast-msg');
+    const icn = document.getElementById('toast-icon');
+    if (!toast || !msg || !icn) return;
+    
+    msg.textContent = message;
+    icn.textContent = icon;
+    toast.classList.remove('translate-y-32', 'opacity-0', 'pointer-events-none');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    setTimeout(() => {
+      closeToast();
+    }, 3800);
+  }
+
+  function closeToast() {
+    const toast = document.getElementById('toast-action');
+    if (!toast) return;
+    toast.classList.add('translate-y-32', 'opacity-0', 'pointer-events-none');
+    toast.classList.remove('translate-y-0', 'opacity-100');
+  }
+
+  const btnSync = document.getElementById('btn-sync-gps');
+  if (btnSync) {
+    btnSync.addEventListener('click', () => {
+      const icon = document.getElementById('sync-icon');
+      const timeLabel = document.getElementById('last-sync-time');
+      if (icon) icon.classList.add('animate-spin');
+      btnSync.disabled = true;
+
+      setTimeout(() => {
+        if (icon) icon.classList.remove('animate-spin');
+        btnSync.disabled = false;
+        if (timeLabel) timeLabel.textContent = 'Actualizado hace 1s';
+        showToast('Coordenadas GPS sincronizadas con la torre de control.', 'satellite_alt');
+      }, 900);
+    });
+  }
+
+  const btnNotify = document.getElementById('btn-notify-store');
+  if (btnNotify) {
+    btnNotify.addEventListener('click', () => {
+      showToast('Alerta enviada: El equipo de tienda #412 prepara la rampa de descarga.', 'campaign');
+    });
+  }
+
+  const btnIncident = document.getElementById('btn-report-incident');
+  if (btnIncident) {
+    btnIncident.addEventListener('click', () => {
+      showToast('Abriendo canal prioritario con la central de monitoreo...', 'security');
+    });
+  }
+</script></main></body></html>
